@@ -1,0 +1,23 @@
+.user-item {
+    width: 100%;
+    min-width: 264px;
+    height: 56px;
+    color: #959595;
+    display: flex;
+    justify-content: space-around;;
+    align-items: center;
+}
+
+.user-name__text {
+    text-align: right;
+    line-height: 20px;
+}
+
+.user-name__text:first-child {
+    font-weight: 700;
+    color: #1d1c1d;
+}
+
+.user-item__icon {
+    width: 37px;
+}

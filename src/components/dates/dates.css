@@ -1,0 +1,21 @@
+.dates {
+    height: 24px;
+    -webkit-user-select: none;
+}
+
+.dates__text.warning {
+    background-color: rgba(242, 153, 74, .3);
+    color: #f2994a;
+}
+
+.dates__text {
+    display: inline-block;
+    line-height: 1.8;
+    height: 100%;
+    color: #2f90ed;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 4px;
+    border-radius: 6px;
+    background-color: rgba(45, 156, 219, .3);
+}

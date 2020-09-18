@@ -1,0 +1,18 @@
+.pagination-points {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.pagination-points span {
+    display: inline-block;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px 0px 6px;
+    background-color: #dddddd;
+}
+
+.pagination-points span.active {
+    background-color: #ff4c00;
+}

@@ -1,0 +1,52 @@
+.event-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.events-item__date {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 6px auto;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+}
+
+.events-item__month {
+    color: #ffffff;
+    font-size: 11px;
+    background-color: #de2f2f;
+    border-radius: 7px 7px 0 0;
+    text-transform: uppercase;
+    padding: 2px 0 3px 0;
+    letter-spacing: 1px;
+}
+
+.events-item__day,
+.events-item__month {
+    text-align: center;
+}
+
+.events-item__day {
+    font-size: 16px;
+    font-weight: 900;
+    margin-right: 2px;
+}
+
+.events-item__text {
+    text-align: center;
+    color: #616061;
+}
+
+.events-item__text span:first-child {
+    padding-right: 7px;
+}
+
+.events-item__text span:last-child {
+    padding-left: 7px;
+}
+
+.events-item__title {
+    padding-top: 30px;
+}

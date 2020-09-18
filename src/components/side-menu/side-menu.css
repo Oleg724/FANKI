@@ -1,0 +1,8 @@
+.side-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu__item {
+    margin: 0 20px 20px 0;
+}

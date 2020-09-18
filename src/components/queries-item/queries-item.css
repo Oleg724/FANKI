@@ -1,0 +1,9 @@
+.queries__text--orange {
+    color: #ff4c00;
+    background-color: #ffeee6;
+    border-radius: 6px;
+}
+
+.queries__text--bold {
+    font-weight: 700;
+}

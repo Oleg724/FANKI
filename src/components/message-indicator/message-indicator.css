@@ -1,0 +1,17 @@
+.message-indicator {
+    width: 172px;
+    height: 36px;
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-indicator__text {
+    width: 70%;
+    font-size: 14px;
+    color: #959595;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+.arrow-large {
+    -webkit-user-select: none;
+    align-self: center;
+}
+
+.arrow-large:hover {
+    cursor: pointer;
+}
+
+.arrow-large.right {
+    transform: rotateY(180deg);
+}
+
+.arrow-large__img {
+    width: 40px;
+}

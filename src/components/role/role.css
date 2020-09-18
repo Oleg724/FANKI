@@ -1,0 +1,15 @@
+.role {
+    height: 56px;
+    border: none;
+    outline: none;
+    list-style: none;
+}
+
+.role__item {
+    height: 56px;
+    padding: 0 20px;
+}
+
+.role__item:hover {
+    background-color: #f5f5f5;
+}

@@ -1,0 +1,19 @@
+.link-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.link-item__title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.link-item__title,
+.link-item__arrow {
+    color: #ff4c00;
+    font-weight: 700;
+}
+
+.link-item__arrow {
+    margin-left: 10px;
+}
