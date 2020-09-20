@@ -73,7 +73,6 @@ const QueriesList = ({
     }
 
     const getArrayFromObject = (obj) => {
-        console.log(Object.entries(obj))
         return Object.entries(obj);
     }
 
@@ -90,7 +89,7 @@ const QueriesList = ({
         : getArrayLength( getArrayFromObject(list) );
         
     const getItemsToShow = (list, dataLength, text, image) => {
-        
+
         return dataLength === 0
             ? <EmptyMessage text={ text } image={ image } />
             : getItemsOrMessageToShow(list);

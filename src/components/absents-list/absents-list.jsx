@@ -79,7 +79,7 @@ class AbsentsList extends Component {
         }
     }
 
-    _renderItems = (arr) => {
+    renderItems = (arr) => {
 
         return arr.map((item) => {
             const { id } = item;
@@ -121,18 +121,19 @@ class AbsentsList extends Component {
     }
 
     render() {
-        const { absentList } = this.props;
+        const { absentList, onPrevPage, onNextPage } = this.props;
         
-        const items = absentList ? this._renderItems( this.getListToShow(absentList) ) : '';
-
+        const items = absentList 
+            ? this.renderItems( this.getListToShow(absentList) ) 
+            : '';
         
         return (
             <div className="absent-list-wrapper">
-                <ArrowLarge onChangePage={ this.props.onPrevPage } />
+                <ArrowLarge onChangePage={ onPrevPage } />
                 <ul className="absent-list">
                     { items }
                 </ul>
-                <ArrowLarge onChangePage={ this.props.onNextPage } clazz=" right"/>
+                <ArrowLarge onChangePage={ onNextPage } clazz=" right"/>
             </div>
         )
     }
@@ -146,4 +147,4 @@ const mapMethodsToProps = (dataService) => {
 
 export default withDataService(mapMethodsToProps)( 
     withDate( 
-        withArrowFunction(AbsentsList) ) );
+        withArrowFunction(AbsentsList)));

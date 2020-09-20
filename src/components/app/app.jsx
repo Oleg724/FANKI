@@ -9,13 +9,14 @@ import AbsentsInfo from '../absents-info';
 import QueriesBoard from '../queries-board';
 import EventsBoard from '../events-board';
 import KnowledgeBaseBoard from '../knowledge-base-board';
+import NotificationsBoard from '../notifications-board';
 
 import './app.css';
 
 export default class App extends Component {
 
     _itemsOnPagesSecondRow = 1;
-    _itemsOnPagesThirdRow = 2;
+    _itemsOnPagesThirdRow = 4;
     increment = 1;
 
     state = {
@@ -58,6 +59,11 @@ export default class App extends Component {
                                 dataName="base" 
                                 userId={ userId }
                                 numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
+
+                            <NotificationsBoard 
+                                title="Уведомления" 
+                                dataName="notifications" 
+                                userId={ userId } />
                             
                             {/* <SliderList title="База знаний"  event="base" count={ 0 } /> */}
                         </div>    

@@ -1,7 +1,7 @@
 import React from 'react';
 import './pagination-points.css';
 
-const PaginationPoints = ({ number = 0, currentPage }) => {
+const PaginationPoints = ({ number = 0, currentPage = 0 }) => {
 
     const points = [...Array(number)].map((item, idx) => {
         return idx === currentPage - 1

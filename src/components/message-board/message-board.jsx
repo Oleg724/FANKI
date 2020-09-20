@@ -11,15 +11,26 @@ const MessageBoard = ({
     onPrevPage, 
     title, 
     children, 
-    list, 
-    currentPage,
+    currentPage = 0,
     numberOfItems,
-    numberOfPages}) => {
+    numberOfPages = 0}) => {
+
+    const arrowLeft = numberOfPages
+        ? <ArrowLarge onChangePage={ onPrevPage } />
+        : '';
+
+    const arrowRigth = numberOfPages
+        ? <ArrowLarge onChangePage={ onNextPage } clazz={' right'} />
+        : '';
+
+    const paginationPoints = numberOfPages
+        ? <PaginationPoints number={ numberOfPages } currentPage={ currentPage } />
+        : '';
 
     return (
         <div className="message-board">
             <div className="message-board__arrow message-board__arrow--left">
-                <ArrowLarge onChangePage={ onPrevPage } />
+                { arrowLeft }
             </div>
             <div className="message-board__item">
                 <HeadlineTitle 
@@ -33,15 +44,12 @@ const MessageBoard = ({
                 </div>
 
                 <div className="pagination-wrapper">
-                    <PaginationPoints 
-                        number={ numberOfPages } 
-                        currentPage={ currentPage } />
+                    { paginationPoints }
                 </div>
                 
             </div>
             <div className="message-board__arrow message-board__arrow--right">
-                <ArrowLarge onChangePage={ onNextPage } 
-                    clazz={' right'} />
+                { arrowRigth }
             </div>
             <div className="message-board__item">
                 <LinkItem title={ title } />

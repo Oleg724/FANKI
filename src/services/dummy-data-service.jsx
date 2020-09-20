@@ -73,8 +73,28 @@ export default class DummyDataService {
             'knowledge-base': {
                 // 'Публикация №1': 'Основы экономической теории',
                 // 'Публикация №2': 'Экономика предприятия',
-                // 'Публикация №3': 'Микро и макроэкономика',
-            }
+                // 'Публикация №3': 'Микро и макроэкономика'
+            },
+            notifications: [
+                {
+                    id: 1,
+                    from: 'Владимиров Владимир',
+                    icon: icon12,
+                    creationTime: '9:22',
+                    type: '',
+                    kind: 'назначает вам задачу',
+                    text: 'Подготовить обновленную презентацию разработанного продукта',
+                },
+                {
+                    id: 2,
+                    from: 'Владимиров Владимир',
+                    icon: icon12,
+                    creationTime: '9:22',
+                    type: 'Групповое событие',
+                    kind: 'Создаёт событие',
+                    text: 'Презентация IT-отдела. Улучшение мобильной платежной системы.',
+                }
+            ]
         },
         {
             id: 2,
@@ -620,6 +640,11 @@ export default class DummyDataService {
         return this._transformUsersDataKnowledgeBase(user);
     }
 
+    getUserNotifications = async (id) => {
+        const user = this._users.filter((user) => user.id === id);
+        return this._transformUsersDataNotifications(user);
+    }
+
     getNumerOfMessages = async () => {
         return this._messages.length;
     }
@@ -643,6 +668,14 @@ export default class DummyDataService {
             id: user[0].id,
             name: user[0].name,
             base: user[0]['knowledge-base']
+        }
+    }
+
+    _transformUsersDataNotifications = (user) => {
+        return {
+            id: user[0].id,
+            name: user[0].name,
+            notifications: user[0].notifications
         }
     }
 }

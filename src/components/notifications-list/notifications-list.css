@@ -1,0 +1,7 @@
+.notifications-list {
+    padding-bottom: 40px;
+}
+
+.notifications-list .empty-message {
+    margin-top: 20px;
+}

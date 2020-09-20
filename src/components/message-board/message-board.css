@@ -7,6 +7,15 @@
     border: 1px solid #dddddd;
     position: relative;
     align-self: flex-start;
+    margin-bottom: 15px;
+}
+
+.message-board:last-child  {
+    min-height: 700px;
+}
+
+.message-board:last-child .message-board__item--lg  {
+    min-height: 620px;
 }
 
 .message-board__item {
