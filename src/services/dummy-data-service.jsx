@@ -10,8 +10,7 @@ import icon9 from '../assets/avatars/17.png';
 import icon10 from '../assets/avatars/7.png';
 import icon11 from '../assets/avatars/10.png';
 import icon12 from '../assets/avatars/2.png';
-import icon13 from '../assets/avatars/291.png';
-import icon14 from '../assets/avatars/25.png';
+import icon13 from '../assets/avatars/25.png';
 
 export default class DummyDataService {
     _users = [
@@ -318,7 +317,7 @@ export default class DummyDataService {
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '10.01.1978',
-            icon: icon14,
+            icon: icon13,
             absence: {
                 type: '',
                 period: {
@@ -570,7 +569,7 @@ export default class DummyDataService {
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '10.01.1978',
-            icon: icon14,
+            icon: icon13,
             absence: {
                 type: 'sickLeave',
                 period: {
