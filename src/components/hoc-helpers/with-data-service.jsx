@@ -9,6 +9,7 @@ const withDataService = (mapMethodsToProps) => (Wrapped) => {
                 {
                     (dataService) => {
                         const serviceProps = mapMethodsToProps(dataService);
+
                         return (
                             <Wrapped {...props} {...serviceProps} />
                         )

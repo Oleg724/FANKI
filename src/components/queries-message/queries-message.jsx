@@ -3,20 +3,20 @@ import './queries-message.css';
 
 const QueriesMessage = ({ text, names }) => {
     return (
-        <p className="queries__text">
-
-            <span>У вас</span> 
-
-            <span className="queries__text queries__text--orange">
-                { text }
-            </span> 
-
-            <span>от сотрудников:</span>
-
-            <span className="queries__text queries__text--bold">
-                { names }
-            </span>
-        </p>   
+        <div className="queries-message">
+            <p className="queries-message__text">
+                У вас 
+                <span className="queries-message__text queries-message__text--orange">
+                    { text }
+                </span> 
+            </p>
+            <p className="queries-message__text">
+                от сотрудников:
+                <span className="queries-message__text queries-message__text--bold">
+                    { names }
+                </span>
+            </p>
+        </div>   
     )
 }
 

@@ -1,6 +1,7 @@
-.event-item {
+.events-item {
     display: flex;
     flex-direction: column;
+    list-style: none;
 }
 
 .events-item__date {

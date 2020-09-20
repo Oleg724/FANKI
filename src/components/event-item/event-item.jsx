@@ -26,7 +26,7 @@ const EventItem = ({ item }) => {
     }
     
     return (
-        <div className="events-item">
+        <li className="events-item">
             <div className="events-item__date">
                 <p className="events-item__month">
                     { getMonth() }
@@ -41,7 +41,7 @@ const EventItem = ({ item }) => {
             <p className="events-item__title">
                 { getTitle() }
             </p>
-        </div>
+        </li>
     )
 }
 

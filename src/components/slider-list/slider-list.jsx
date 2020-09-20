@@ -15,7 +15,8 @@ class SliderList extends Component {
         numberOfItems: 1,
         queries: false,
         events: false,
-        base: false
+        base: false,
+        informationComponent: ''
     }
 
     setNumberOfPages = (num) => {
@@ -30,6 +31,12 @@ class SliderList extends Component {
         const { userId, currentPage } = this.props;
         const { queries, events, base } = this.state;
 
+        console.log(userId);
+
+        if (!userId) {
+            return;
+        }
+
         if (queries) return (
             <Queries userId={ userId } currentPage={ currentPage }
                 setNumberOfPages={ (num) => this.setNumberOfPages(num) } 
@@ -43,16 +50,42 @@ class SliderList extends Component {
         if (base) return 'Нет публикаций';
     }
 
+    setInformationBlock() {
+        this.state({
+            informationItems: this.getInformationBlock()
+        })
+    }
+
     componentDidMount() {
         this.setState({
             [this.props.event]: true
         })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        const { setNumberOfPages, userId, currentPage } = this.props;
+        const { 
+            informationComponent, 
+            setNumberOfItems, 
+            queries, 
+            events, 
+            base } = this.state;
+
+        if (setNumberOfPages !== prevProps.setNumberOfPages 
+            || userId !== prevProps.userId
+            || currentPage !== prevProps.currentPage
+            || informationComponent !== prevState.informationComponent
+            // || queries !== prevState.queries
+            // || events !== prevState.events
+            // || base !== prevState.base
+            || setNumberOfItems !== prevState.setNumberOfItems) {
+            this.getInformationBlock();
+        }
+    }
+
     render() {
         const { onNextPage, onPrevPage, title } = this.props;
-
-        const information = this.getInformationBlock();
+        const { informationComponent } = this.state;
 
         return (
             <div className="slider-list">
@@ -60,13 +93,16 @@ class SliderList extends Component {
                     <ArrowLarge onChangePage={ onPrevPage } />
                 </div>
                 <div className="slider-list__item">
-                    <HeadlineTitle title={ title } count={ this.state.numberOfItems } />
+                    <HeadlineTitle 
+                        title={ title } 
+                        count={ this.state.numberOfItems } />
                 </div>
                 <div className="slider-list__item slider-list__item--lg">
-                    { information }
+                    { informationComponent }
                 </div>
                 <div className="slider-list__arrow slider-list__arrow--right">
-                    <ArrowLarge onChangePage={ onNextPage } clazz={' right'} />
+                    <ArrowLarge onChangePage={ onNextPage } 
+                        clazz={' right'} />
                 </div>
                 <div className="slider-list__item">
                     <LinkItem title={ title } />

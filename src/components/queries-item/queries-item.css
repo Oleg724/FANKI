@@ -1,7 +1,10 @@
-.queries__text--orange {
-    color: #ff4c00;
-    background-color: #ffeee6;
-    border-radius: 6px;
+.queries__item {
+    padding: 10px 0;
+}
+
+.queries__text {
+    line-height: 1.7;
+    padding: 0 3px;
 }
 
 .queries__text--bold {

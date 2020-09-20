@@ -1,0 +1,10 @@
+.queries {
+    max-width: 243px;
+    display: flex;
+    justify-content: center;
+    margin: 28px 0 auto 0;
+}
+
+.queries__list {
+    list-style: none;
+}

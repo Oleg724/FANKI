@@ -6,20 +6,22 @@ import DummyDataService from '../../services/dummy-data-service';
 import Constants from '../constants/constants';
 import SideMenu from '../side-menu';
 import AbsentsInfo from '../absents-info';
-import SliderList from '../slider-list';
+import QueriesBoard from '../queries-board';
+import EventsBoard from '../events-board';
+import KnowledgeBaseBoard from '../knowledge-base-board';
 
 import './app.css';
 
 export default class App extends Component {
 
+    _itemsOnPagesSecondRow = 1;
+    _itemsOnPagesThirdRow = 2;
+    increment = 1;
+
     state = {
         dataService: new DummyDataService(),
         constants: new Constants(),
         userId: 1,
-    }
-
-    selectedId = (id) => {
-        this.setState({ userId: id });
     }
 
     render() {
@@ -30,8 +32,7 @@ export default class App extends Component {
                 <ConstantsProvider value={ constants }>
                 <div className="app">
                     <Header 
-                        userId={ userId } 
-                        selectedId={ this.selectedId }/>
+                        userId={ userId } />
 
                     <main className="main">
                         <aside className="aside">
@@ -39,9 +40,26 @@ export default class App extends Component {
                         </aside>
                         <div className="content">
                             <AbsentsInfo title="Отсутствующие сотрудники" count={ 0 }/>
-                            <SliderList title="Запросы" event="queries" />
-                            <SliderList title="Ближайшие события" event="events" count={ 2 } userId={ userId } />
-                            <SliderList title="База знаний"  event="base" count={ 0 } />
+
+                            <QueriesBoard 
+                                title="Запросы" 
+                                dataName="queries"
+                                userId={ userId } 
+                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow } inc={ this.increment } />
+
+                            <EventsBoard 
+                                title="Календарь" 
+                                dataName="events" 
+                                userId={ userId }
+                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
+
+                            <KnowledgeBaseBoard 
+                                title="База знаний" 
+                                dataName="base" 
+                                userId={ userId }
+                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
+                            
+                            {/* <SliderList title="База знаний"  event="base" count={ 0 } /> */}
                         </div>    
                     </main>
                 </div>

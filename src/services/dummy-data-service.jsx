@@ -33,8 +33,10 @@ export default class DummyDataService {
                 }
             },
             queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
+                'Запрос №1': 'Петров Алексей',
+                'Запрос №2': 'Шишкин Егор',
+                'Запрос №3': 'Фёдоров Георгий',
+                'Запрос №4': 'Фёдоров Георгий',
             },
             events: [
                 {
@@ -66,8 +68,13 @@ export default class DummyDataService {
                     date: '18 авг',
                     time: '10:00 - 11:00',
                     title: 'Презентация мобильной системы'
-                }
-            ]
+                },
+            ],
+            'knowledge-base': {
+                // 'Публикация №1': 'Основы экономической теории',
+                // 'Публикация №2': 'Экономика предприятия',
+                // 'Публикация №3': 'Микро и макроэкономика',
+            }
         },
         {
             id: 2,
@@ -86,10 +93,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 3,
@@ -108,10 +111,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 4,
@@ -130,10 +129,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 5,
@@ -152,10 +147,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 6,
@@ -174,10 +165,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 7,
@@ -196,10 +183,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 8,
@@ -218,10 +201,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 9,
@@ -240,10 +219,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 10,
@@ -262,10 +237,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 11,
@@ -284,10 +255,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 12,
@@ -306,10 +273,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 13,
@@ -328,10 +291,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 14,
@@ -350,10 +309,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 15,
@@ -372,10 +327,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 16,
@@ -394,10 +345,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 17,
@@ -416,10 +363,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 18,
@@ -438,10 +381,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 19,
@@ -460,10 +399,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 20,
@@ -482,10 +417,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 21,
@@ -504,10 +435,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 22,
@@ -526,10 +453,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 23,
@@ -548,10 +471,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 24,
@@ -570,10 +489,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 25,
@@ -592,10 +507,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 26,
@@ -614,10 +525,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 27,
@@ -636,10 +543,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },
         {
             id: 28,
@@ -658,10 +561,6 @@ export default class DummyDataService {
                     }
                 }
             },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
-            }
         },        {
             id: 29,
             name: 'Алексеев Алексей',
@@ -678,10 +577,6 @@ export default class DummyDataService {
                         before: '2020-09-18T13:00:00'
                     }
                 }
-            },
-            queries: {
-                'Петров Алексей': 'Запрос №1',
-                'Шишкин Егор': 'Запрос №2'
             },
             events: [
                 {
@@ -710,14 +605,19 @@ export default class DummyDataService {
         return this._users;
     }
 
-    getUsersEvents = async (id) => {
+    getUserEvents = async (id) => {
         const user = this._users.filter((user) => user.id === id);
-        return this._transformUsers(user);
+        return this._transformUsersDataEvents(user);
     }
 
-    getUsersQueries = async (id) => {
+    getUserQueries = async (id) => {
         const user = this._users.filter((user) => user.id === id);
-        return this._transformUsers(user);
+        return this._transformUsersDataWithQueries(user);
+    }
+
+    getUserKnowledgeBase = async (id) => {
+        const user = this._users.filter((user) => user.id === id);
+        return this._transformUsersDataKnowledgeBase(user);
     }
 
     getNumerOfMessages = async () => {
@@ -726,17 +626,23 @@ export default class DummyDataService {
 
     _transformUsersDataWithQueries = (user) => {
         return {
-            id: user[0].id,
-            name: user[0].name,
             queries: user[0].queries
         }
     }
 
-    _transformUsers = (user) => {
+    _transformUsersDataEvents = (user) => {
         return {
             id: user[0].id,
             name: user[0].name,
             events: user[0].events
+        }
+    }
+
+    _transformUsersDataKnowledgeBase = (user) => {
+        return {
+            id: user[0].id,
+            name: user[0].name,
+            base: user[0]['knowledge-base']
         }
     }
 }

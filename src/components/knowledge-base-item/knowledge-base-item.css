@@ -1,0 +1,12 @@
+.knowledge-base-list__item {
+    padding: 18px 0;
+}
+
+.knowledge-base-list__text {
+    line-height: 1.7;
+    padding: 0 3px;
+}
+
+.knowledge-base-list__text span {
+    font-weight: 700;
+}

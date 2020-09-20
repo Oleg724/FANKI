@@ -1,0 +1,10 @@
+.knowledge-base-list {
+    max-width: 243px;
+    display: flex;
+    justify-content: center;
+    margin-top: 19px;
+}
+
+.knowledge-base-list__list {
+    list-style: none;
+}
