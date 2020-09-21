@@ -3,7 +3,7 @@ import EventsItem from '../events-item';
 import EventsItemLg from '../events-item-lg';
 import EmptyMessage from '../empty-message';
 import noArticlesImage from '../../assets/no-articles.png';
-import { withDate } from '../hoc-helpers/';
+import { withFormattedDateFuncs } from '../hoc-helpers';
 import './events-list.css';
 
 class EventsList extends Component {
@@ -16,11 +16,6 @@ class EventsList extends Component {
         btnId: '', 
     }
 
-    // в работе
-    // onHandleClick(e) {
-    //     const target = e.target;
-    // }
-
     getFormattedText = (num) => {
         if (num === 1) return 'комментарий';
         if (num < 5) return 'комментария';
@@ -28,8 +23,8 @@ class EventsList extends Component {
         return '';
     }
 
-    getDayNameWithTime = (hoursAndMinutesOnly) => {
-        return `Сегодня, ${ hoursAndMinutesOnly }`;
+    getDayNameWithTime = (time) => {
+        return `Сегодня, ${ time }`;
     }
 
     getFormattedDate = (date) => {
@@ -38,23 +33,22 @@ class EventsList extends Component {
             getHoursAndMinutesOnly, 
             checkDateOnToday } = this.props;
 
-        const formattedDate = getFormattedDateFullMonthAndTime( new Date(date) );
-
-        const hoursAndMinutesOnly = getHoursAndMinutesOnly(date);
-
         const isToday = checkDateOnToday(date); 
-    
-        const dayNameWithTime = isToday ? this.getDayNameWithTime(hoursAndMinutesOnly) : date;
+        const hoursAndMinutesOnly = getHoursAndMinutesOnly(date); 
+
+        return isToday ? 
+            this.getDayNameWithTime(hoursAndMinutesOnly) 
+            : getFormattedDateFullMonthAndTime( new Date(date) );
     }
 
     getItemToRender = (item) => {
         const clazz = this.getClazz(item); 
         
-        const formattedDate = this.getFormattedDate(item.creation);
+        const formattedDate = this.getFormattedDate(item.creationTime);
         const formattedText = this.getFormattedText(item.comments);
 
         return item.type !== 'news'
-            ?  <EventsItem { ...item } clazz={ clazz } />
+            ?  <EventsItem { ...item } clazz={ clazz } date={ formattedDate }/>
             :  <EventsItemLg { ...item } 
                     date={ formattedDate } 
                     onHandleClick={ this.onHandleClick } 
@@ -106,10 +100,7 @@ class EventsList extends Component {
     }    
 
     render() {
-        const { 
-            list, 
-            getFormattedDateFullMonth, 
-            getFormattedDateFullMonthAndTime } = this.props;
+        const { list } = this.props;
 
         const dataLength = this.isArray(list) 
             ? this.getArrayLength(list)
@@ -125,4 +116,4 @@ class EventsList extends Component {
     }
 }
 
-export default withDate(EventsList);
+export default withFormattedDateFuncs(EventsList);

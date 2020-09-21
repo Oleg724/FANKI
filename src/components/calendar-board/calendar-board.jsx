@@ -24,13 +24,12 @@ class CalendarBoard extends Component {
         const {       
             title,
             list, 
-            itemsOnPage,
             numberOfItems, 
             numberOfItemsOnPage,
             numberOfPages, 
             currentPage, 
             onNextPage, 
-            onPrevPage} = this.props;
+            onPrevPage } = this.props;
 
         const messageBoardProps = {
             list: list, 

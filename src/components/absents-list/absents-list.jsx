@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UserItem from '../user-item';
 import Dates from '../dates';
 import ArrowLarge from '../arrow-large';
-import { withDataService, withDate, withArrowFunction } from '../hoc-helpers';
+import { withDataService, withFormattedDateFuncs, withArrowFunction } from '../hoc-helpers';
 
 import './absents-list.css';
 
@@ -146,5 +146,5 @@ const mapMethodsToProps = (dataService) => {
 };
 
 export default withDataService(mapMethodsToProps)( 
-    withDate( 
+    withFormattedDateFuncs( 
         withArrowFunction(AbsentsList)));

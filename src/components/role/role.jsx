@@ -30,7 +30,7 @@ const Role = ({ userId, data: users, showList = true }) => {
 
         return arr.map((item, idx) => {
 
-            if (idx > 0) return; // заглушка
+            if (idx > 0) return ''; // заглушка
 
             const { id } = item;
 

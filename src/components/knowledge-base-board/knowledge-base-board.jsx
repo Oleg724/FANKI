@@ -1,4 +1,4 @@
-import React, { Component, cloneElement } from 'react';
+import React, { Component } from 'react';
 import MessageBoard from '../message-board';
 import KnowledgeBaseList from '../knowledge-base-list';
 import { withDataService, withUpdatedData, withArrowFunction } from '../hoc-helpers';
@@ -24,14 +24,12 @@ class KnowledgeBaseBoard extends Component {
         const {       
             title,
             list, 
-            itemsOnPage,
             numberOfItems, 
             numberOfItemsOnPage,
             numberOfPages, 
             currentPage, 
             onNextPage, 
-            onPrevPage,
-            children } = this.props;
+            onPrevPage } = this.props;
 
         const messageBoardProps = {
             list: list, 

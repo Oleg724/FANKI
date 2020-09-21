@@ -3,7 +3,7 @@ import HeadlineTitle from '../headline-title';
 import Tab from '../tab';
 import InfoPlate from '../info-plate';
 import AbsentsList from '../absents-list';
-import { withDataService, withData, withDate } from '../hoc-helpers';
+import { withDataService, withData, withFormattedDateFuncs } from '../hoc-helpers';
 import './absents-info.css';
 
 class AbsentsInfo extends Component {
@@ -189,8 +189,6 @@ class AbsentsInfo extends Component {
         
         const filteredList = this.getFilteredList(absentList, absentFilter)
 
-        console.log(this.getFormattedNumber(sickLeaveNumber))
-
         return (
             <div className="absents-info">
                 <div className="absents-info__inner">
@@ -244,4 +242,4 @@ const mapMethodsToProps = (dataService) => {
     }
 };
 
-export default withDataService(mapMethodsToProps)( withData( withDate(AbsentsInfo)));
+export default withDataService(mapMethodsToProps)( withData( withFormattedDateFuncs(AbsentsInfo)));

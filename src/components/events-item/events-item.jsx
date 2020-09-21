@@ -5,10 +5,9 @@ const EventsItem = ({
     id, 
     from, 
     icon, 
-    creationTime, 
     title,
     clazz = '',
-    isToday }) => {
+    date }) => {
 
     return (
         <li className={ `events__item events-item${ clazz }` } key={ id }>
@@ -16,7 +15,7 @@ const EventsItem = ({
             <div className="events-item__inner">
                 <div className="events-item__header">
                     <p className="events-item__name">{ from }</p>
-                    <p className="events-item__time">{ creationTime }</p>                  
+                    <p className="events-item__time">{ date }</p>                  
                 </div>                   
                 <p className="events-item__text">{ title }</p>
             </div>                    
