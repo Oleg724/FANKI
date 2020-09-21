@@ -11,6 +11,8 @@ import CalendarBoard from '../calendar-board';
 import KnowledgeBaseBoard from '../knowledge-base-board';
 import NotificationsBoard from '../notifications-board';
 import EventsBoard from '../events-board';
+import ErrorBoundry from '../error-boundry';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './app.css';
 
 export default class App extends Component {
@@ -29,52 +31,61 @@ export default class App extends Component {
         const { userId, dataService, constants } = this.state;
 
         return (
-            <ServiceProvider value={ dataService }>
-                <ConstantsProvider value={ constants }>
-                <div className="app">
-                    <Header 
-                        userId={ userId } />
-
-                    <main className="main">
-                        <aside className="aside">
-                            <SideMenu />
-                        </aside>
-                        <div className="content">
-                            <AbsentsInfo title="Отсутствующие сотрудники" count={ 0 }/>
-
-                            <QueriesBoard 
-                                title="Запросы" 
-                                dataName="queries"
-                                userId={ userId } 
-                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow } inc={ this.increment } />
-
-                            <CalendarBoard 
-                                title="Календарь" 
-                                dataName="events" 
-                                userId={ userId }
-                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
-
-                            <KnowledgeBaseBoard 
-                                title="База знаний" 
-                                dataName="base" 
-                                userId={ userId }
-                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
-
-                            <EventsBoard 
-                                title="Водопад событий" 
-                                dataName="events" 
+            <ErrorBoundry>
+                <ServiceProvider value={ dataService }>
+                    <BrowserRouter>
+                        <ConstantsProvider value={ constants }>
+                        <div className="app">
+                            <Header 
                                 userId={ userId } />
+                            <main className="main">
+                                <aside className="aside">
+                                    <SideMenu />
+                                </aside>
+                                <Switch>
+                                    <Route 
+                                        path="/"  
+                                        exact>
+                                        <div className="content">
+                                            <AbsentsInfo title="Отсутствующие сотрудники" count={ 0 }/>
 
-                            <NotificationsBoard 
-                                title="Уведомления" 
-                                dataName="notifications" 
-                                userId={ userId } />
-                            
-                        </div>    
-                    </main>
-                </div>
-                </ConstantsProvider>
-            </ServiceProvider>
+                                            <QueriesBoard 
+                                                title="Запросы" 
+                                                dataName="queries"
+                                                userId={ userId } 
+                                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow } inc={ this.increment } />
+
+                                            <CalendarBoard 
+                                                title="Календарь" 
+                                                dataName="events" 
+                                                userId={ userId }
+                                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
+
+                                            <KnowledgeBaseBoard 
+                                                title="База знаний" 
+                                                dataName="base" 
+                                                userId={ userId }
+                                                numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
+
+                                            <EventsBoard 
+                                                title="Водопад событий" 
+                                                dataName="events" 
+                                                userId={ userId } />
+
+                                            <NotificationsBoard 
+                                                title="Уведомления" 
+                                                dataName="notifications" 
+                                                userId={ userId } />                              
+                                        </div> 
+                                    </Route> 
+                                    <Redirect to="/"/> 
+                                </Switch> 
+                            </main>
+                        </div>
+                        </ConstantsProvider>
+                    </BrowserRouter>
+                </ServiceProvider>
+            </ErrorBoundry>
         )
     }
 }

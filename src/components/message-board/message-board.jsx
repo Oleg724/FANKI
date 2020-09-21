@@ -8,11 +8,12 @@ import './message-board.css';
 const MessageBoard = ({
     onNextPage, 
     onPrevPage, 
-    title, 
+    title,
+    withoutLink = false, 
     children, 
     currentPage = 0,
     numberOfItems,
-    numberOfPages = 0}) => {
+    numberOfPages = 0 }) => {
 
     const arrowLeft = numberOfPages
         ? <ArrowLarge onChangePage={ onPrevPage } />
@@ -24,6 +25,10 @@ const MessageBoard = ({
 
     const paginationPoints = numberOfPages
         ? <PaginationPoints number={ numberOfPages } currentPage={ currentPage } />
+        : '';
+
+    const linkItem = withoutLink 
+        ? <LinkItem title={ title } />
         : '';
 
     return (
@@ -51,7 +56,7 @@ const MessageBoard = ({
                 { arrowRigth }
             </div>
             <div className="message-board__item">
-                <LinkItem title={ title } />
+                { linkItem }
             </div>
         </div>
     )

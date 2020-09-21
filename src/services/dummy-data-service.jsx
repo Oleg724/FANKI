@@ -80,7 +80,7 @@ export default class DummyDataService {
                 {
                     id: 1,
                     from: 'Владимиров Владимир',
-                    icon: icon12,
+                    icon: icon14,
                     creationTime: '9:22',
                     type: '',
                     kind: 'назначает вам задачу',
@@ -128,8 +128,8 @@ export default class DummyDataService {
                     icon: updatesImage,
                     creationTime: '2020-09-21T12:00:00',
                     comments: '18',
-                    likes: '0',
-                    likes2: '0',
+                    likes: '3',
+                    likes2: '5',
                     title: 'Здесь будет находится очень длинный заголовок опубликованной новости в водопаде событий',
                     text: `Разнооборазный и богатый опыт, постоянный количественный рост и сфера нашей активности
                         позволяет оценить значение позиций, занимаемых нашей компанией`,
@@ -650,15 +650,15 @@ export default class DummyDataService {
     ];
 
     _messages = [
-        {
-            type: 'query',
-            date: '20.08.2020',
-            title: 'Ваш запрос на больничный',
-            period: {
-                start: '20.08.2020',
-                end: '21.08.2020',
-            }
-        }
+        // {
+        //     type: 'query',
+        //     date: '20.08.2020',
+        //     title: 'Ваш запрос на больничный',
+        //     period: {
+        //         start: '20.08.2020',
+        //         end: '21.08.2020',
+        //     }
+        // }
     ]
 
     getUsers = async () => {

@@ -16,33 +16,39 @@
 }
 
 .list__item {
+    list-style: none;
+}
+
+.link__item {
     width: 190px;
     height: 36px;
     display: flex;
     align-items: center;
     transition: all .3s linear;
+    text-decoration: none;
+    color: #000000;
 }
 
-.list__item:hover {
+.link__item:hover {
     cursor: pointer;
     border-radius: 8px;
     background-color: #ff4c00;
     color: #ffffff;
 }
 
-.list__item:hover .list__icon > svg:not(.white) path {
+.link__item:hover .link__icon > svg:not(.white) path {
     fill: #ffffff;
 }
 
-.list__item:hover .list__icon > .white path {
+.link__item:hover .link__icon > .white path {
     stroke: #ffffff;
 }
 
-.list__icon {
+.link__icon {
     padding: 0 15px 0 5px;
 }
 
 .label,
-.list__item {
+.link__item {
     -webkit-user-select: none;
 }

@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import { Link } from 'react-router-dom';
 import Arrow from '../arrow';
 import './list.css';
 
@@ -20,9 +21,12 @@ export default class List extends Component {
         return Object.entries(obj).map(([name, icon]) => {
 
             return (
-                <li className="list__item" key={ name }>
-                    <span className="list__icon">{ icon }</span>
-                    <p className="list__text">{ name }</p>    
+                <li className="list__item link" key={ name }>
+                    {/* оставил заглушку */}
+                    <Link className="link__item" to="/">  
+                        <span className="link__icon">{ icon }</span>
+                        <p className="link__text">{ name }</p> 
+                    </Link>   
                 </li>
             )
         })

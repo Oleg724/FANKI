@@ -12,10 +12,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    -webkit-user-select: none;
 }
 
 .feedback-buttons__item:hover {
     cursor: pointer;
+}
+
+.feedback-buttons__item.active {
+    border: 1px solid #ff4c00;
 }
 
 .feedback-buttons__img {

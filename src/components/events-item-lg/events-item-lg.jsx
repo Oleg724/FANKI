@@ -13,7 +13,20 @@ const EventsItemLg = ({
     comments,
     likes,
     likes2,
-    date }) => {
+    date,
+    onHandleClick,
+    isActive,
+    clickedBtnId,
+    btnId }) => {
+
+    const getFormattedText = (num) => {
+        if (comments === 1) return 'комментарий';
+        if (comments < 5) return 'комментария';
+        if (comments >= 5) return 'комментариев';
+        return '';
+    }
+
+    const formattedText = getFormattedText(comments);
 
     return (
         <li className="events__item events-item-lg" key={ id }>
@@ -24,8 +37,15 @@ const EventsItemLg = ({
                 <p className="events-item-lg__text">{ text }</p>
                 <div className="events-item-lg__inner">
                     <div className="events-item-lg__buttons">
-                        <FeedbackButtons comments={ comments } likes={ likes } likes2={ likes2 } />
-                        <CommentsElem num={ comments }/>
+                        <FeedbackButtons 
+                            comments={ comments } 
+                            likes={ likes } 
+                            likes2={ likes2 }
+                            onHandleClick={ onHandleClick }
+                            isActive={ isActive }
+                            clickedBtnId={ clickedBtnId }
+                            id={ btnId } />
+                        <CommentsElem num={ comments } text={ formattedText }/>
                     </div>  
                 </div>
             </div>                       
