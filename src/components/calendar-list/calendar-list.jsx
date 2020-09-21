@@ -21,9 +21,19 @@ const CalendarList = ({
         return [...arr].slice(startIdx, endIdx);
     }
 
+    const getNumberFromStr = (str) => {
+        return Number.parseInt(str);
+    }
+
     const renderItems = (list) => {
         return list.map((item) => {
             return <EventItem item={ item } key={ item.title }/>
+        });
+    }
+
+    const setItemsInOrderOfData = (list) => {
+        return [...list].sort((a, b) => {
+            return getNumberFromStr(a.date) - getNumberFromStr(b.date);
         });
     }
 
@@ -47,7 +57,7 @@ const CalendarList = ({
 
         return dataLength === 0
             ? <EmptyMessage text={ text } image={ image } />
-            : renderItems( getListToShow(list) );
+            : renderItems( getListToShow( setItemsInOrderOfData(list) ) );
     }    
 
     const itemsToRender = getItemsToShow(list, dataLength, _noItemsText, noArticlesImage);
