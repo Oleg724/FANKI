@@ -125,15 +125,19 @@ class AbsentsInfo extends Component {
         return this.getAbsentFilteredItemsByType(filteredByDateList, value);
     }
 
-    getFormattedText = (text, num ) => {
-        if (num === 0) return 'Нет';
-        if (num === 1) return text;
-        if (num === 2) return `${text}a`;
+    getFormattedText = (text, num) => {
+        if (num === 0) {
+            return 'Нет';
+        } else if (num === 1) {
+            return text;
+        } else if (num < 5) {
+            return `${text}a`;
+        }
         return `${text}ов`;
     }
 
     getFormattedNumber = (num) => {
-        if (num === 0) return '';
+        return num === 0 ? '' : num;
     }
 
     componentDidMount() {
@@ -184,6 +188,8 @@ class AbsentsInfo extends Component {
             sickLeaveNumber } = this.state;
         
         const filteredList = this.getFilteredList(absentList, absentFilter)
+
+        console.log(this.getFormattedNumber(sickLeaveNumber))
 
         return (
             <div className="absents-info">

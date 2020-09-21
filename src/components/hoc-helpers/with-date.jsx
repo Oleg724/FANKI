@@ -7,9 +7,39 @@ const withDate = (View) => {
             tomorrowWithShortMonth: '',
             weekWithShortMonth: '',
         }
+
+        checkDateOnToday(obj) {
+            const now = new Date();
+            const todayDay = now.getDay();
+            const todayMounth = now.getMonth();
+            const todayYear = now.getYear();
+
+            const date = new Date(obj);
+            const day = date.getDay();
+            const month = date.getMonth();
+            const year = date.getYear();
+
+            if ( todayDay - day && todayMounth - month && todayYear - year ) {
+                return true
+            }
+
+            return false;
+        }
     
         getCurrentDate() {
             return new Date();
+        }
+
+        getHoursOnly(obj) {
+            return new Date(obj).getHours();
+        }
+
+        getMinutesOnly(obj) {
+            return new Date(obj).getMinutes();
+        }
+
+        getHoursAndMinutesOnly(hours, minutes) {
+            return `${ hours }:${ minutes }`;
         }
 
         getNextDay() {
@@ -80,7 +110,9 @@ const withDate = (View) => {
                     getFormattedDateFullMonth={ this.getFormattedDateFullMonth }
                     getFormattedDateFullMonthAndTime={ this.getFormattedDateFullMonthAndTime }
                     getCurrentDate={ this.getCurrentDate }                   
-                    setDate={ this.setDate } 
+                    setDate={ this.setDate }
+                    getHoursAndMinutesOnly={ this.getHoursAndMinutesOnly }
+                    checkDateOnToday={ this.checkDateOnToday } 
                     />
             )
         }

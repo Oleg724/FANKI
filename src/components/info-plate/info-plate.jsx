@@ -10,7 +10,7 @@ const InfoPlate = ({
     active = '', 
     actionHandler }) => {
 
-        const activeClass = active ? ' active' : '';
+    const activeClass = active ? ' active' : '';
 
     return (
         <div className={ `info-plate${activeClass}` } 

@@ -16,7 +16,12 @@
 
 .message-board:nth-child(5) {
     flex-grow: 2;
-    margin-right: 1.57%;
+    margin: 0 1.57% 0 0;
+    min-height: 740px;
+}
+
+.message-board:nth-child(5) .message-board__item--lg {
+    min-height: 660px;
 }
 
 .message-board:last-child .message-board__item--lg  {

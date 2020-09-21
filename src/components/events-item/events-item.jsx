@@ -7,7 +7,8 @@ const EventsItem = ({
     icon, 
     creationTime, 
     title,
-    clazz = '' }) => {
+    clazz = '',
+    isToday }) => {
 
     return (
         <li className={ `events__item events-item${ clazz }` } key={ id }>

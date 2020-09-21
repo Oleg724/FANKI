@@ -17,16 +17,8 @@ const EventsItemLg = ({
     onHandleClick,
     isActive,
     clickedBtnId,
-    btnId }) => {
-
-    const getFormattedText = (num) => {
-        if (comments === 1) return 'комментарий';
-        if (comments < 5) return 'комментария';
-        if (comments >= 5) return 'комментариев';
-        return '';
-    }
-
-    const formattedText = getFormattedText(comments);
+    btnId,
+    formattedText }) => {
 
     return (
         <li className="events__item events-item-lg" key={ id }>

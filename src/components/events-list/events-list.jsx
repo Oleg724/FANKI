@@ -16,32 +16,54 @@ class EventsList extends Component {
         btnId: '', 
     }
 
-    onHandleClick(e) {
-        const target = e.target;
+    // в работе
+    // onHandleClick(e) {
+    //     const target = e.target;
+    // }
 
-        console.log(target)
+    getFormattedText = (num) => {
+        if (num === 1) return 'комментарий';
+        if (num < 5) return 'комментария';
+        if (num >= 5) return 'комментариев';
+        return '';
+    }
 
-        // this.setState({ 
-        //     isActive: true,
-        //     id: id
-        // });
+    getDayNameWithTime = (hoursAndMinutesOnly) => {
+        return `Сегодня, ${ hoursAndMinutesOnly }`;
+    }
 
-        // console.log(id)
+    getFormattedDate = (date) => {
+        const { 
+            getFormattedDateFullMonthAndTime, 
+            getHoursAndMinutesOnly, 
+            checkDateOnToday } = this.props;
+
+        const formattedDate = getFormattedDateFullMonthAndTime( new Date(date) );
+
+        const hoursAndMinutesOnly = getHoursAndMinutesOnly(date);
+
+        const isToday = checkDateOnToday(date); 
+    
+        const dayNameWithTime = isToday ? this.getDayNameWithTime(hoursAndMinutesOnly) : date;
     }
 
     getItemToRender = (item) => {
-        const clazz = this.getClazz(item);
-        const formattedDate = this.props.getFormattedDateFullMonthAndTime( new Date(item.creationTime) );
+        const clazz = this.getClazz(item); 
+        
+        const formattedDate = this.getFormattedDate(item.creation);
+        const formattedText = this.getFormattedText(item.comments);
 
         return item.type !== 'news'
             ?  <EventsItem { ...item } clazz={ clazz } />
             :  <EventsItemLg { ...item } 
-                date={ formattedDate } 
-                onHandleClick={ this.onHandleClick } 
-                isActive={ this.state.isActive } 
-                clickedBtnId={ this.state.clickedBtnId }
-                btnId={ this.state.btnId }
-                clazz={ clazz } />
+                    date={ formattedDate } 
+                    onHandleClick={ this.onHandleClick } 
+                    isActive={ this.state.isActive } 
+                    clickedBtnId={ this.state.clickedBtnId }
+                    btnId={ this.state.btnId }
+                    clazz={ clazz }
+                    formattedText={ formattedText }
+                 />
     }
 
     sortListByDate = (arr) => {
@@ -84,7 +106,10 @@ class EventsList extends Component {
     }    
 
     render() {
-        const { list, getFormattedDateFullMonth, getFormattedDateFullMonthAndTime } = this.props;
+        const { 
+            list, 
+            getFormattedDateFullMonth, 
+            getFormattedDateFullMonthAndTime } = this.props;
 
         const dataLength = this.isArray(list) 
             ? this.getArrayLength(list)
