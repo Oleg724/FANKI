@@ -8,6 +8,10 @@
     height: 24px;
 }
 
+.comments-elem:hover {
+    cursor: pointer;
+}
+
 .comments-elem__img {
     width: 18px;
     height: 18px;

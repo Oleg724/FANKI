@@ -3,7 +3,6 @@ import ArrowLarge from '../arrow-large';
 import HeadlineTitle from '../headline-title';
 import LinkItem from '../link-item';
 import PaginationPoints from '../pagination-points';
-
 import './message-board.css';
 
 const MessageBoard = ({

@@ -6,11 +6,7 @@ import './events-board.css';
 
 const EventsBoard = ({ title, list, numberOfItems }) => {
 
-    const messageBoardProps = {
-        list: list, 
-        title: title,
-        numberOfItems: numberOfItems
-    }
+    const messageBoardProps = { list, title, numberOfItems };
 
     return (
         <MessageBoard { ...messageBoardProps }>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Fanki from './fanki-icon';
 import Flesh from './flesh-icon';
 import Calendar from './calendar-icon';

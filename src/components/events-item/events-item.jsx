@@ -6,7 +6,7 @@ const EventsItem = ({
     from, 
     icon, 
     creationTime, 
-    text,
+    title,
     clazz = '' }) => {
 
     return (
@@ -17,7 +17,7 @@ const EventsItem = ({
                     <p className="events-item__name">{ from }</p>
                     <p className="events-item__time">{ creationTime }</p>                  
                 </div>                   
-                <p className="events-item__text">{ text }</p>
+                <p className="events-item__text">{ title }</p>
             </div>                    
         </li>
     )

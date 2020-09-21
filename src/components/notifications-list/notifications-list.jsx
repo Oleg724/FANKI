@@ -11,7 +11,7 @@ const NotificationsList = ({ list }) => {
 
     const renderItems = (list) => {
         return list.map((item) => {
-            return <NotificationsItem { ...item } />
+            return <NotificationsItem { ...item } key={ item.id } />
         });
     }
 

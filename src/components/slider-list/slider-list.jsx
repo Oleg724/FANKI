@@ -75,9 +75,6 @@ class SliderList extends Component {
             || userId !== prevProps.userId
             || currentPage !== prevProps.currentPage
             || informationComponent !== prevState.informationComponent
-            // || queries !== prevState.queries
-            // || events !== prevState.events
-            // || base !== prevState.base
             || setNumberOfItems !== prevState.setNumberOfItems) {
             this.getInformationBlock();
         }

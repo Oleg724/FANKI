@@ -9,7 +9,6 @@ const CalendarList = ({
     list, 
     currentPage, 
     numberOfItemsOnPage, 
-    // numberOfItems,
     getStartIndex,
     getEndIndex}) => {
 

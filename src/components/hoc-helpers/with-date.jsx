@@ -32,16 +32,29 @@ const withDate = (View) => {
             return `${ date  } ${ mounth }`
         }
 
-        getFormattedDateFullMonth(obj) {
+        getFormattedDateFullMonth = (obj) => {
             const mounths = ['января', 'февраля', 'марта', 'апреля', 
                 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 
                 'ноября', 'декабря'];
-                
+
             const date = obj.getDate();
             const mounth = mounths[ obj.getMonth() ];
             const year = obj.getFullYear();
-    
             return `${ date } ${ mounth } ${ year }`
+        }
+
+        getFormattedDateFullMonthAndTime(obj) {
+            const mounths = ['января', 'февраля', 'марта', 'апреля', 
+                'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 
+                'ноября', 'декабря'];
+
+            const date = obj.getDate();
+            const mounth = mounths[ obj.getMonth() ];
+            const year = obj.getFullYear();
+            const hours = obj.getHours();
+            const minutes = obj.getMinutes();
+      
+            return `${ date } ${ mounth } ${ year }, ${ hours }:${ minutes }0`;
         }
     
         getHours = (date) => {
@@ -60,13 +73,15 @@ const withDate = (View) => {
 
         render() {
             return (
-                <View { ...this.props } { ...this.state } 
-                    getFormattedDateFullMonth={ this.getFormattedDateFullMonth }
+                <View { ...this.props } { ...this.state }                   
                     getHours={ this.getHours }
                     getNextDay={ this.getNextDay }
                     getNextWeek={ this.getNextWeek }
-                    getCurrentDate={ this.getCurrentDate }
-                    setDate={ this.setDate } />
+                    getFormattedDateFullMonth={ this.getFormattedDateFullMonth }
+                    getFormattedDateFullMonthAndTime={ this.getFormattedDateFullMonthAndTime }
+                    getCurrentDate={ this.getCurrentDate }                   
+                    setDate={ this.setDate } 
+                    />
             )
         }
     }

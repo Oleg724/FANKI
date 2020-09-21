@@ -1,0 +1,36 @@
+.events-item-lg {
+    list-style: none;
+    border-top: 1px solid #dddddd;
+    padding: 20px 25px;
+}
+
+.events-item-lg__image {
+    width: 100%;
+}
+
+.events-item-lg__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0 0;
+}    
+
+.events-item-lg__text,
+.events-item-lg__title {
+    padding-top: 10px;
+}   
+
+.events-item-lg__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.events-item-lg__time {
+    padding: 10px 0 0 0;
+}
+
+.events-item-lg__text,
+.events-item-lg__time {
+    color: #959595;
+}

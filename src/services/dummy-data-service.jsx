@@ -12,6 +12,7 @@ import icon11 from '../assets/avatars/10.png';
 import icon12 from '../assets/avatars/2.png';
 import icon13 from '../assets/avatars/25.png';
 import icon14 from '../assets/avatars/1.png';
+import updatesImage from '../assets/updates.png';
 
 export default class DummyDataService {
     _users = [
@@ -101,7 +102,7 @@ export default class DummyDataService {
                     from: 'Fanki Soft',
                     type: 'company',
                     icon: icon3,
-                    creationTime: '2020-09-22T10:50',
+                    creationTime: '2020-09-22T10:50:00',
                     comments: '',
                     likes: '',
                     likes2: '',
@@ -112,8 +113,8 @@ export default class DummyDataService {
                     id: 2,
                     from: 'Калинина Оксана',
                     type: 'employee',
-                    icon: icon3,
-                    creationTime: '2020-09-22T09:20',
+                    icon: icon14,
+                    creationTime: '2020-09-22T09:20:00',
                     comments: '',
                     likes: '',
                     likes2: '',
@@ -123,46 +124,9 @@ export default class DummyDataService {
                 {
                     id: 3,
                     from: 'Fanki Soft',
-                    type: 'company',
-                    icon: icon3,
-                    creationTime: '2020-09-21T12:00',
-                    comments: '18',
-                    likes: '0',
-                    likes2: '0',
-                    title: 'Здесь будет находится очень длинный заголовок опубликованной новости в водопаде событий',
-                    text: `Разнооборазный и богатый опыт, постоянный количественный рост и сфера нашей активности
-                        позволяет оценить значение позиций, занимаемых нашей компанией`,
-                },
-                {
-                    id: 4,
-                    from: 'Fanki Soft',
                     type: 'news',
-                    icon: icon3,
-                    creationTime: '2020-09-22T10:50',
-                    comments: '',
-                    likes: '',
-                    likes2: '',
-                    title: 'Текст обьявления, который написан от лица компании',
-                    text: '',
-                },
-                {
-                    id: 5,
-                    from: 'Калинина Оксана',
-                    type: 'employee',
-                    icon: icon3,
-                    creationTime: '2020-09-22T09:20',
-                    comments: '',
-                    likes: '',
-                    likes2: '',
-                    title: 'Текст обьявления, который написан от лица сотрудника',
-                    text: '',
-                },
-                {
-                    id: 6,
-                    from: 'Fanki Soft',
-                    type: 'news',
-                    icon: icon3,
-                    creationTime: '2020-09-21T12:00',
+                    icon: updatesImage,
+                    creationTime: '2020-09-21T12:00:00',
                     comments: '18',
                     likes: '0',
                     likes2: '0',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from '../header';
 import { ServiceProvider } from '../service-context';
 import { ConstantsProvider } from '../constants-context';
+import Header from '../header';
 import DummyDataService from '../../services/dummy-data-service';
 import Constants from '../constants/constants';
 import SideMenu from '../side-menu';
@@ -11,7 +11,6 @@ import CalendarBoard from '../calendar-board';
 import KnowledgeBaseBoard from '../knowledge-base-board';
 import NotificationsBoard from '../notifications-board';
 import EventsBoard from '../events-board';
-
 import './app.css';
 
 export default class App extends Component {

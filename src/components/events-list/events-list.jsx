@@ -3,30 +3,41 @@ import EventsItem from '../events-item';
 import EventsItemLg from '../events-item-lg';
 import EmptyMessage from '../empty-message';
 import noArticlesImage from '../../assets/no-articles.png';
+import { withDate } from '../hoc-helpers/';
 import './events-list.css';
 
-const EventsList = ({ list }) => {
+const EventsList = ({ 
+    list, 
+    getFormattedDateFullMonth, 
+    getFormattedDateFullMonthAndTime }) => {
     
     const _noItemsText = 'Нет новых обьявлений';
 
     const getItemToRender = (item) => {
         const clazz = getClazz(item);
+        const formattedDate = getFormattedDateFullMonthAndTime( new Date(item.creationTime) );
 
         return item.type !== 'news'
-            ?  <EventsItem item clazz={ clazz } />
-            :  <EventsItemLg item />
+            ?  <EventsItem { ...item } clazz={ clazz } />
+            :  <EventsItemLg { ...item } date={ formattedDate } />
+    }
+
+    const sortListByDate = (arr) => {
+        return [...arr].sort((a, b) => new Date(b.creationTime) - new Date(a.creationTime));
     }
 
     const getClazz = (item) => {
         if (item.type === 'company') {
-            return 'red';
+            return ' or';
         } else if (item.type === 'employee') {
-            return 'blue';
+            return ' gr';
         }
     }
 
     const renderItems = (list) => {
-        return list.map((item) => {
+        const sortedList = sortListByDate(list);
+
+        return sortedList.map((item) => {
             return getItemToRender(item);
         });
     }
@@ -63,4 +74,4 @@ const EventsList = ({ list }) => {
     )
 }
 
-export default EventsList;
+export default withDate(EventsList);

@@ -4,7 +4,6 @@ import Tab from '../tab';
 import InfoPlate from '../info-plate';
 import AbsentsList from '../absents-list';
 import { withDataService, withData, withDate } from '../hoc-helpers';
-
 import './absents-info.css';
 
 class AbsentsInfo extends Component {
@@ -239,4 +238,4 @@ const mapMethodsToProps = (dataService) => {
     }
 };
 
-export default withDataService(mapMethodsToProps)( withData( withDate(AbsentsInfo) ) );
+export default withDataService(mapMethodsToProps)( withData( withDate(AbsentsInfo)));

@@ -63,4 +63,4 @@ const mapMethodsToProps = (dataService) => {
     }
 };
 
-export default withDataService(mapMethodsToProps)( withData(Role) );
+export default withDataService(mapMethodsToProps)( withData(Role));

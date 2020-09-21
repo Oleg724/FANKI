@@ -11,7 +11,7 @@
 }
 
 .message-board:last-child  {
-    min-height: 700px;
+    min-height: 740px;
 }
 
 .message-board:nth-child(5) {
@@ -20,7 +20,8 @@
 }
 
 .message-board:last-child .message-board__item--lg  {
-    min-height: 620px;
+    min-height: 660px;
+    margin-bottom: 0;
 }
 
 .message-board__item {
