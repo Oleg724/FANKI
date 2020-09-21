@@ -1,7 +1,7 @@
 import React from 'react';
-import './event-item.css';
+import './calendar-item.css';
 
-const EventItem = ({ item }) => {
+const CalendarItem = ({ item }) => {
 
     const getType = () => {
         return item.type;
@@ -26,23 +26,23 @@ const EventItem = ({ item }) => {
     }
     
     return (
-        <li className="events-item">
-            <div className="events-item__date">
-                <p className="events-item__month">
+        <li className="calendar-item">
+            <div className="calendar-item__date">
+                <p className="calendar-item__month">
                     { getMonth() }
                 </p>
-                <p className="events-item__day">
+                <p className="calendar-item__day">
                     { getDay() }
                 </p>
             </div>
-            <p className="events-item__text">
+            <p className="calendar-item__text">
                 <span>{ getTime() }</span> | <span>{ getType() }</span>
             </p>
-            <p className="events-item__title">
+            <p className="calendar-item__title">
                 { getTitle() }
             </p>
         </li>
     )
 }
 
-export default EventItem;
+export default CalendarItem;

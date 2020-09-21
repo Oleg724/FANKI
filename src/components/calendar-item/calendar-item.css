@@ -1,10 +1,10 @@
-.events-item {
+.calendar-item {
     display: flex;
     flex-direction: column;
     list-style: none;
 }
 
-.events-item__date {
+.calendar-item__date {
     width: 40px;
     height: 40px;
     display: flex;
@@ -14,7 +14,7 @@
     border: 1px solid #dddddd;
 }
 
-.events-item__month {
+.calendar-item__month {
     color: #ffffff;
     font-size: 11px;
     background-color: #de2f2f;
@@ -24,30 +24,30 @@
     letter-spacing: 1px;
 }
 
-.events-item__day,
-.events-item__month {
+.calendar-item__day,
+.calendar-item__month {
     text-align: center;
 }
 
-.events-item__day {
+.calendar-item__day {
     font-size: 16px;
     font-weight: 900;
     margin-right: 2px;
 }
 
-.events-item__text {
+.calendar-item__text {
     text-align: center;
     color: #616061;
 }
 
-.events-item__text span:first-child {
+.calendar-item__text span:first-child {
     padding-right: 7px;
 }
 
-.events-item__text span:last-child {
+.calendar-item__text span:last-child {
     padding-left: 7px;
 }
 
-.events-item__title {
+.calendar-item__title {
     padding-top: 30px;
 }

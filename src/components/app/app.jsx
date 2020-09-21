@@ -7,9 +7,10 @@ import Constants from '../constants/constants';
 import SideMenu from '../side-menu';
 import AbsentsInfo from '../absents-info';
 import QueriesBoard from '../queries-board';
-import EventsBoard from '../events-board';
+import CalendarBoard from '../calendar-board';
 import KnowledgeBaseBoard from '../knowledge-base-board';
 import NotificationsBoard from '../notifications-board';
+import EventsBoard from '../events-board';
 
 import './app.css';
 
@@ -48,7 +49,7 @@ export default class App extends Component {
                                 userId={ userId } 
                                 numberOfItemsOnPage={ this._itemsOnPagesSecondRow } inc={ this.increment } />
 
-                            <EventsBoard 
+                            <CalendarBoard 
                                 title="Календарь" 
                                 dataName="events" 
                                 userId={ userId }
@@ -60,12 +61,16 @@ export default class App extends Component {
                                 userId={ userId }
                                 numberOfItemsOnPage={ this._itemsOnPagesSecondRow }/>
 
+                            <EventsBoard 
+                                title="Водопад событий" 
+                                dataName="events" 
+                                userId={ userId } />
+
                             <NotificationsBoard 
                                 title="Уведомления" 
                                 dataName="notifications" 
                                 userId={ userId } />
                             
-                            {/* <SliderList title="База знаний"  event="base" count={ 0 } /> */}
                         </div>    
                     </main>
                 </div>

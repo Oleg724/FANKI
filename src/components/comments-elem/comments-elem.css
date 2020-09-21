@@ -1,0 +1,19 @@
+.comments-elem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #dddddd;
+    border-radius: 50px;
+    width: 155px;
+    height: 24px;
+}
+
+.comments-elem__img {
+    width: 18px;
+    height: 18px;
+}
+
+.comments-elem__count {
+    font-size: 12;
+    font-weight: 700;
+}

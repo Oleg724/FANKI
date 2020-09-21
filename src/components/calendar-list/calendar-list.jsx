@@ -1,33 +1,30 @@
 import React from 'react';
-import EventsItem from '../events-item';
-import EventsItemLg from '../events-item-lg';
+import EventItem from '../calendar-item';
 import EmptyMessage from '../empty-message';
 import noArticlesImage from '../../assets/no-articles.png';
-import './events-list.css';
+import { withGettingIndiciesFuncs } from '../hoc-helpers';
+import './calendar-list.css';
 
-const EventsList = ({ list }) => {
-    
-    const _noItemsText = 'Нет новых обьявлений';
+const CalendarList = ({ 
+    list, 
+    currentPage, 
+    numberOfItemsOnPage, 
+    // numberOfItems,
+    getStartIndex,
+    getEndIndex}) => {
 
-    const getItemToRender = (item) => {
-        const clazz = getClazz(item);
+    const _noItemsText = 'Нет новых событий';
 
-        return item.type !== 'news'
-            ?  <EventsItem item clazz={ clazz } />
-            :  <EventsItemLg item />
-    }
+    const getListToShow = (arr) => {
+        const startIdx = getStartIndex(currentPage, numberOfItemsOnPage);
+        const endIdx = getEndIndex(currentPage, numberOfItemsOnPage);
 
-    const getClazz = (item) => {
-        if (item.type === 'company') {
-            return 'red';
-        } else if (item.type === 'employee') {
-            return 'blue';
-        }
+        return [...arr].slice(startIdx, endIdx);
     }
 
     const renderItems = (list) => {
         return list.map((item) => {
-            return getItemToRender(item);
+            return <EventItem item={ item } key={ item.title }/>
         });
     }
 
@@ -51,16 +48,16 @@ const EventsList = ({ list }) => {
 
         return dataLength === 0
             ? <EmptyMessage text={ text } image={ image } />
-            : renderItems(list);
+            : renderItems( getListToShow(list) );
     }    
 
     const itemsToRender = getItemsToShow(list, dataLength, _noItemsText, noArticlesImage);
 
     return (
-        <ul className="events-list">
+        <ul className="calendar-list">
             { itemsToRender }
         </ul>
     )
 }
 
-export default EventsList;
+export default withGettingIndiciesFuncs(CalendarList);

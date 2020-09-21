@@ -14,6 +14,11 @@
     min-height: 700px;
 }
 
+.message-board:nth-child(5) {
+    flex-grow: 2;
+    margin-right: 1.57%;
+}
+
 .message-board:last-child .message-board__item--lg  {
     min-height: 620px;
 }
@@ -21,6 +26,11 @@
 .message-board__item {
     width: 100%;
     background-color: #ffffff;
+}
+
+.message-board__item:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .message-board__item:nth-child(2) {

@@ -1,60 +1,22 @@
-import React, { Component } from 'react';
-import EventsList from '../events-list';
+import React from 'react';
 import MessageBoard from '../message-board';
-import { withDataService, withArrowFunction, withUpdatedData } from '../hoc-helpers';
+import EventsList from '../events-list';
+import { withDataService, withUpdatedData } from '../hoc-helpers';
 import './events-board.css';
 
-class EventsBoard extends Component {
+const EventsBoard = ({ title, list, numberOfItems }) => {
 
-    componentDidMount() {
-        const { setNumberOfPages, numberOfPages } = this.props;
-
-        setNumberOfPages(numberOfPages);
+    const messageBoardProps = {
+        list: list, 
+        title: title,
+        numberOfItems: numberOfItems
     }
-    
-    componentDidUpdate(prevProps, prevState) {
-        const { setNumberOfPages, numberOfPages } = this.props;
 
-        if (prevProps.numberOfPages !== numberOfPages) {
-            setNumberOfPages(numberOfPages);
-        }  
-    } 
-    
-    render() {
-        const {       
-            title,
-            list, 
-            itemsOnPage,
-            numberOfItems, 
-            numberOfItemsOnPage,
-            numberOfPages, 
-            currentPage, 
-            onNextPage, 
-            onPrevPage} = this.props;
-
-        const messageBoardProps = {
-            list: list, 
-            currentPage: currentPage,
-            onNextPage: onNextPage,
-            onPrevPage: onPrevPage,
-            title: title,
-            numberOfPages: numberOfPages,
-            numberOfItems: numberOfItems
-        }
-    
-        const listProps = {
-            list: list,
-            currentPage: currentPage,
-            numberOfItemsOnPage: numberOfItemsOnPage,
-            numberOfItems: numberOfItems,
-        }
-
-        return (
-            <MessageBoard { ...messageBoardProps }>
-                <EventsList { ...listProps }/>
-            </MessageBoard>
-        )  
-    }
+    return (
+        <MessageBoard { ...messageBoardProps }>
+            <EventsList list={ list } />
+        </MessageBoard>
+    )  
 }
 
 const mapMethodsToProps = (dataService) => {
@@ -63,6 +25,5 @@ const mapMethodsToProps = (dataService) => {
     }
 };
 
-export default withDataService(mapMethodsToProps)(  
-    withArrowFunction( 
-        withUpdatedData( EventsBoard )));
+export default withDataService(mapMethodsToProps)( 
+    withUpdatedData( EventsBoard ));

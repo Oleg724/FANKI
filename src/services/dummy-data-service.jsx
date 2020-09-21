@@ -11,6 +11,7 @@ import icon10 from '../assets/avatars/7.png';
 import icon11 from '../assets/avatars/10.png';
 import icon12 from '../assets/avatars/2.png';
 import icon13 from '../assets/avatars/25.png';
+import icon14 from '../assets/avatars/1.png';
 
 export default class DummyDataService {
     _users = [
@@ -37,7 +38,7 @@ export default class DummyDataService {
                 'Запрос №3': 'Фёдоров Георгий',
                 'Запрос №4': 'Фёдоров Георгий',
             },
-            events: [
+            calendar: [
                 {
                     type: 'Групповое событие',
                     date: '20 авг',
@@ -87,11 +88,87 @@ export default class DummyDataService {
                 {
                     id: 2,
                     from: 'Владимиров Владимир',
-                    icon: icon12,
-                    creationTime: '9:22',
+                    icon: icon14,
+                    creationTime: '9:20',
                     type: 'Групповое событие',
                     kind: 'Создаёт событие',
                     text: 'Презентация IT-отдела. Улучшение мобильной платежной системы.',
+                }
+            ],
+            events: [
+                {
+                    id: 1,
+                    from: 'Fanki Soft',
+                    type: 'company',
+                    icon: icon3,
+                    creationTime: '2020-09-22T10:50',
+                    comments: '',
+                    likes: '',
+                    likes2: '',
+                    title: 'Текст обьявления, который написан от лица компании',
+                    text: '',
+                },
+                {
+                    id: 2,
+                    from: 'Калинина Оксана',
+                    type: 'employee',
+                    icon: icon3,
+                    creationTime: '2020-09-22T09:20',
+                    comments: '',
+                    likes: '',
+                    likes2: '',
+                    title: 'Текст обьявления, который написан от лица сотрудника',
+                    text: '',
+                },
+                {
+                    id: 3,
+                    from: 'Fanki Soft',
+                    type: 'company',
+                    icon: icon3,
+                    creationTime: '2020-09-21T12:00',
+                    comments: '18',
+                    likes: '0',
+                    likes2: '0',
+                    title: 'Здесь будет находится очень длинный заголовок опубликованной новости в водопаде событий',
+                    text: `Разнооборазный и богатый опыт, постоянный количественный рост и сфера нашей активности
+                        позволяет оценить значение позиций, занимаемых нашей компанией`,
+                },
+                {
+                    id: 4,
+                    from: 'Fanki Soft',
+                    type: 'news',
+                    icon: icon3,
+                    creationTime: '2020-09-22T10:50',
+                    comments: '',
+                    likes: '',
+                    likes2: '',
+                    title: 'Текст обьявления, который написан от лица компании',
+                    text: '',
+                },
+                {
+                    id: 5,
+                    from: 'Калинина Оксана',
+                    type: 'employee',
+                    icon: icon3,
+                    creationTime: '2020-09-22T09:20',
+                    comments: '',
+                    likes: '',
+                    likes2: '',
+                    title: 'Текст обьявления, который написан от лица сотрудника',
+                    text: '',
+                },
+                {
+                    id: 6,
+                    from: 'Fanki Soft',
+                    type: 'news',
+                    icon: icon3,
+                    creationTime: '2020-09-21T12:00',
+                    comments: '18',
+                    likes: '0',
+                    likes2: '0',
+                    title: 'Здесь будет находится очень длинный заголовок опубликованной новости в водопаде событий',
+                    text: `Разнооборазный и богатый опыт, постоянный количественный рост и сфера нашей активности
+                        позволяет оценить значение позиций, занимаемых нашей компанией`,
                 }
             ]
         },
@@ -624,9 +701,9 @@ export default class DummyDataService {
         return this._users;
     }
 
-    getUserEvents = async (id) => {
+    getUserCalendar = async (id) => {
         const user = this._users.filter((user) => user.id === id);
-        return this._transformUsersDataEvents(user);
+        return this._transformUsersDataCalendar(user);
     }
 
     getUserQueries = async (id) => {
@@ -644,6 +721,11 @@ export default class DummyDataService {
         return this._transformUsersDataNotifications(user);
     }
 
+    getUserEvents = async (id) => {
+        const user = this._users.filter((user) => user.id === id);
+        return this._transformUsersDataEvents(user);
+    }
+
     getNumerOfMessages = async () => {
         return this._messages.length;
     }
@@ -654,11 +736,11 @@ export default class DummyDataService {
         }
     }
 
-    _transformUsersDataEvents = (user) => {
+    _transformUsersDataCalendar = (user) => {
         return {
             id: user[0].id,
             name: user[0].name,
-            events: user[0].events
+            events: user[0].calendar
         }
     }
 
@@ -675,6 +757,14 @@ export default class DummyDataService {
             id: user[0].id,
             name: user[0].name,
             notifications: user[0].notifications
+        }
+    }
+
+    _transformUsersDataEvents = (user) => {
+        return {
+            id: user[0].id,
+            name: user[0].name,
+            events: user[0].events
         }
     }
 }
