@@ -5,7 +5,7 @@ const NotificationsItem = ({
     id, 
     from, 
     icon, 
-    creationTime, 
+    date, 
     type, 
     kind, 
     text }) => {
@@ -23,7 +23,7 @@ const NotificationsItem = ({
                         <p className="notifications-item__name">{ from }</p>
                         <p className="notifications-item__kind">{ kind }</p>
                     </div>                   
-                    <p className="notifications-item__time">{ creationTime }</p>
+                    <p className="notifications-item__time">{ date }</p>
                 </div>
                 <p className="notifications-item__text">{ text }</p>
                 { typeName }

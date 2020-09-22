@@ -2,6 +2,17 @@
     list-style: none;
     border-top: 1px solid #dddddd;
     padding: 20px 25px;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+.events-item-lg:hover {
+    cursor: pointer;
+    background-color:#f8f8f8;
+}
+
+.events-item-lg.new {
+    border-top: 1px solid #ff3c00;
 }
 
 .events-item-lg__image {
@@ -33,4 +44,31 @@
 .events-item-lg__text,
 .events-item-lg__time {
     color: #959595;
+}
+
+.events-item-lg__block-time {
+    display: none;
+    height: 24px;
+    min-width: 86px;
+    color: #ff3c00;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;    
+    text-align: center;
+    line-height: 1.8;
+    position: absolute;
+    top: -13px;
+    left: 20px;
+    padding: 0 14px;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.events-item-lg.active .events-item-lg__block-time {  
+    display: block;
+}
+
+.events-item-lg.new .events-item-lg__block-time {
+    border: 1px solid #ff3c00;
+    display: block;
 }

@@ -189,8 +189,6 @@ class AbsentsInfo extends Component {
         
         const filteredList = this.getFilteredList(absentList, absentFilter)
 
-        console.log(this.getFormattedNumber(sickLeaveNumber))
-
         return (
             <div className="absents-info">
                 <div className="absents-info__inner">

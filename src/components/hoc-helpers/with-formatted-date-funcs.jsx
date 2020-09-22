@@ -9,11 +9,35 @@ const withFormattedDateFuncs = (View) => {
             weekWithShortMonth: '',
         }
 
+        getTodayWordWithTime = (time) => {
+            return `Сегодня, ${ time }`;
+        }
+
+        getTodayWord = () => {
+            return 'Сегодня';
+        }
+
+        getYesterdayWord = () => {
+            return 'Вчера';
+        }
+
         checkDateOnToday(obj) {
             const now = new Date();
             const date = new Date(obj);
 
             if ( now.getDate() === date.getDate() 
+                && now.getMonth() === date.getMonth() 
+                && now.getYear() === date.getYear() ) {
+                return true
+            }       
+            return false;      
+        }
+
+        checkDateOnYesterday(obj) {
+            const now = new Date();
+            const date = new Date(obj);
+
+            if ( now.getDate() === date.getDate() + 1 
                 && now.getMonth() === date.getMonth() 
                 && now.getYear() === date.getYear() ) {
                 return true
@@ -47,13 +71,13 @@ const withFormattedDateFuncs = (View) => {
         }
 
         getNextDay = () => {
-            const tomorrow = this.getCurrentDate();
-            return new Date(tomorrow.setDate(tomorrow.getDate() + 1));
+            const today = this.getCurrentDate();
+            return new Date(today.setDate(today.getDate() + 1));
         }
 
         getNextWeek = () => {
-            const week = this.getCurrentDate();
-            return new Date(week.setDate(week.getDate() + 7));
+            const today = this.getCurrentDate();
+            return new Date(today.setDate(today.getDate() + 7));
         }
 
         getFullMonthName(num) {
@@ -71,7 +95,7 @@ const withFormattedDateFuncs = (View) => {
                 return mounths[ obj.getMonth() ];
         }
     
-        getDayAndShortMonth(obj) {
+        getDayAndShortMonth = (obj) => {
             return `${ obj.getDate() } ${ this.getShortMonthName(obj) }`
         }
 
@@ -84,6 +108,14 @@ const withFormattedDateFuncs = (View) => {
             return str < 10 
                 ? this.addNullToNumber(str) 
                 : str;
+        }
+
+        getFullDateFromStr(str) {
+            const date = new Date(str).getDate();
+            const mounth = new Date(str).getMonth();
+            const year = new Date(str).getFullYear();
+
+            return `${ date } ${ mounth } ${ year }`;
         }
 
         getFormattedDateFullMonthAndTime = (obj) => {
@@ -109,11 +141,17 @@ const withFormattedDateFuncs = (View) => {
             setDate: this.setDate,
             getCurrentDate: this.getCurrentDate,  
             getNextDay: this.getNextDay,
+            getDayAndShortMonth: this.getDayAndShortMonth,
             getNextWeek: this.getNextWeek,
             getFormattedDateFullMonth: this.getFormattedDateFullMonth,
             getFormattedDateFullMonthAndTime: this.getFormattedDateFullMonthAndTime,                                    
             checkDateOnToday: this.checkDateOnToday,
-            getHoursAndMinutesOnly: this.getHoursAndMinutesOnly
+            getHoursAndMinutesOnly: this.getHoursAndMinutesOnly,
+            getFullDateFromStr: this.getFullDateFromStr,
+            checkDateOnYesterday: this.checkDateOnYesterday,
+            getTodayWordWithTime: this.getTodayWordWithTime,
+            getTodayWord: this.getTodayWord,
+            getYesterdayWord: this.getYesterdayWord
         } 
 
         render() {
