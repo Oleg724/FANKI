@@ -53,10 +53,6 @@ class EventsItemLg extends Component {
             likes,
             likes2,
             date,
-            onHandleClick,
-            isActive,
-            clickedBtnId,
-            btnId,
             formattedText } = this.props;
         
         return (
@@ -73,11 +69,7 @@ class EventsItemLg extends Component {
                             <FeedbackButtons 
                                 comments={ comments } 
                                 likes={ likes } 
-                                likes2={ likes2 }
-                                onHandleClick={ onHandleClick }
-                                isActive={ isActive }
-                                clickedBtnId={ clickedBtnId }
-                                id={ btnId } />
+                                likes2={ likes2 } />
                             <CommentsElem num={ comments } text={ formattedText }/>
                         </div>  
                     </div>
@@ -85,7 +77,6 @@ class EventsItemLg extends Component {
             </li>
         )
     }
-
 }
 
 export default EventsItemLg;
