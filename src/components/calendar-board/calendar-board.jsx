@@ -38,7 +38,8 @@ class CalendarBoard extends Component {
             onPrevPage: onPrevPage,
             title: title,
             numberOfPages: numberOfPages,
-            numberOfItems: numberOfItems
+            numberOfItems: numberOfItems,
+            path: '/calendar'
         }
     
         const listProps = {

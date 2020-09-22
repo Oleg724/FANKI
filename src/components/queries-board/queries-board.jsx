@@ -38,7 +38,8 @@ class QueriesBoard extends Component {
             onPrevPage: onPrevPage,
             title: title,
             numberOfPages: numberOfPages,
-            numberOfItems: numberOfItems
+            numberOfItems: numberOfItems,
+            path: '/queries'
         }
     
         const listProps = {

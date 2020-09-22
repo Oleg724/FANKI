@@ -13,7 +13,8 @@ const MessageBoard = ({
     children, 
     currentPage = 0,
     numberOfItems,
-    numberOfPages = 0 }) => {
+    numberOfPages = 0,
+    path }) => {
 
     const arrowLeft = numberOfPages
         ? <ArrowLarge onChangePage={ onPrevPage } />
@@ -28,7 +29,7 @@ const MessageBoard = ({
         : '';
 
     const linkItem = withoutLink 
-        ? <LinkItem title={ title } />
+        ? <LinkItem title={ title } path={ path } />
         : '';
 
     return (

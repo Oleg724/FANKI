@@ -38,7 +38,8 @@ class KnowledgeBaseBoard extends Component {
             onPrevPage: onPrevPage,
             title: title,
             numberOfPages: numberOfPages,
-            numberOfItems: numberOfItems
+            numberOfItems: numberOfItems,
+            path: '/knowledge-base'
         }
     
         const listProps = {

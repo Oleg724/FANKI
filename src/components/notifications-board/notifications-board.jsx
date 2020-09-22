@@ -9,7 +9,8 @@ const NotificationsBoard = ({ title, list, numberOfItems }) => {
     const messageBoardProps = {
         list: list, 
         title: title,
-        numberOfItems: numberOfItems
+        numberOfItems: numberOfItems,
+        path: '/notifications'
     }
 
     return (
