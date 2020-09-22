@@ -408,7 +408,7 @@ export default class DummyDataService {
         },
         {
             id: 17,
-            name: 'Никифорова Валентина',
+            name: 'Дурова Жанна',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '10.03.1975',
@@ -418,15 +418,15 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-10',
                     end: {
-                        after: '2020-09-21T10:00:00',
-                        before: '2020-09-21T12:00:00'
+                        after: '2020-10-11T10:00:00',
+                        before: '2020-10-11T12:00:00'
                     }
                 }
             },
         },
         {
             id: 18,
-            name: 'Сапогова Лилия',
+            name: 'Караваева Лилия',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '05.12.1976',
@@ -436,15 +436,15 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-31T10:00:00',
-                        before: '2020-09-31T12:00:00'
+                        after: '2020-10-05T10:00:00',
+                        before: '2020-10-05T12:00:00'
                     }
                 }
             },
         },
         {
             id: 19,
-            name: 'Шепелева Галина',
+            name: 'Антоненко Галина',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '29.01.1982',
@@ -454,15 +454,15 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-10-10T10:00:00',
-                        before: '2020-10-10T12:00:00'
+                        after: '2020-10-4T10:00:00',
+                        before: '2020-10-4T12:00:00'
                     }
                 }
             },
         },
         {
             id: 20,
-            name: 'Федотов Алексей',
+            name: 'Лунченко Алексей',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '03.05.1980',
@@ -472,15 +472,15 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-25T10:00:00',
-                        before: '2020-09-25T12:00:00'
+                        after: '2020-09-29T10:00:00',
+                        before: '2020-09-29T12:00:00'
                     }
                 }
             },
         },
         {
             id: 21,
-            name: 'Кузнецова Екатерина',
+            name: 'Кузнецов Евгений',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '22.11.1979',
@@ -490,15 +490,15 @@ export default class DummyDataService {
                 period: {
                     start: '2020-09-15',
                     end: {
-                        after: '2020-10-01T10:00:00',
-                        before: '2020-10-01T12:00:00'
+                        after: '2020-10-03T10:00:00',
+                        before: '2020-10-03T12:00:00'
                     }
                 }
             },
         },
         {
             id: 22,
-            name: 'Яковлев Николай',
+            name: 'Краснов Николай',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '13.05.1969',
@@ -516,7 +516,7 @@ export default class DummyDataService {
         },
         {
             id: 23,
-            name: 'Гончаров Леонид',
+            name: 'Павленко Леонид',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '01.01.1973',
@@ -534,7 +534,7 @@ export default class DummyDataService {
         },
         {
             id: 24,
-            name: 'Зырянов Кирилл',
+            name: 'Павлов Кирилл',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '25.06.1980',
@@ -552,7 +552,7 @@ export default class DummyDataService {
         },
         {
             id: 25,
-            name: 'Терентьев Валерий',
+            name: 'Прокофьев Валерий',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '12.12.1975',
@@ -562,8 +562,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-09-18T09:00:00',
-                        before: '2020-09-18T13:00:00'
+                        after: '2020-09-25T09:00:00',
+                        before: '2020-09-25T13:00:00'
                     }
                 }
             },
@@ -588,7 +588,7 @@ export default class DummyDataService {
         },
         {
             id: 27,
-            name: 'Петров Алексей',
+            name: 'Петренкр Алексей',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '02.08.1977',
@@ -606,7 +606,7 @@ export default class DummyDataService {
         },
         {
             id: 28,
-            name: 'Шишкин Егор',
+            name: 'Широков Егор',
             position: 'Менеджер по продажам',
             role: 'user',
             birthday: '10.01.1978',
@@ -633,8 +633,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-09-18T09:00:00',
-                        before: '2020-09-18T13:00:00'
+                        after: '2020-09-24T09:00:00',
+                        before: '2020-09-24T13:00:00'
                     }
                 }
             },

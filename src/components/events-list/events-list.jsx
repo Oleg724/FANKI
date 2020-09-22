@@ -56,8 +56,7 @@ class EventsList extends Component {
                     clickedBtnId={ this.state.clickedBtnId }
                     btnId={ this.state.btnId }
                     clazz={ clazz }
-                    formattedText={ formattedText }
-                 />
+                    formattedText={ formattedText } />
     }
 
     sortListByDate = (arr) => {

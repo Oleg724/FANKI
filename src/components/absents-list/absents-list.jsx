@@ -37,13 +37,15 @@ class AbsentsList extends Component {
     }
 
     checkRestOfDays = (endTime) => {
+        const { getNextDay, getNextWeek, datesFilter } = this.props;
+
         let now = '';
         const end = new Date(endTime);
 
-        if (this.props.datesFilter === "tomorrow") {
-            now = this.props.getNextDay();
-        } else if (this.props.datesFilter === "week") {
-            now = this.props.getNextWeek();
+        if (datesFilter === "tomorrow") {
+            now = getNextDay();
+        } else if (datesFilter === "week") {
+            now = getNextWeek();
         } else {
             now = new Date();
         }
@@ -52,13 +54,14 @@ class AbsentsList extends Component {
     }
 
     getEndTime = (end) => {
+        const { getHoursAndMinutesOnly, getFormattedDateFullMonth } = this.props;
         const endAfter = new Date(end.after);
 
         if ( this.checkRestOfDays(end.after) > 2 ) {
-            return `${ this.props.getFormattedDateFullMonth(endAfter) }`
+            return `${ getFormattedDateFullMonth(endAfter) }`
         } else {
-            return `${ this.props.getFormattedDateFullMonth(endAfter) }, 
-                ${ this.props.getHours(end.after) } - ${ this.props.getHours(end.before) }`;
+            return `${ getFormattedDateFullMonth(endAfter) }, 
+                ${ getHoursAndMinutesOnly(end.after) } - ${ getHoursAndMinutesOnly(end.before) }`;
         }
     }
 
@@ -80,7 +83,6 @@ class AbsentsList extends Component {
     }
 
     renderItems = (arr) => {
-
         return arr.map((item) => {
             const { id } = item;
             const period = this.getPeriod(item);

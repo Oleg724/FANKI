@@ -46,12 +46,12 @@ const withFormattedDateFuncs = (View) => {
             return `${ this.getHoursOnly(obj) }:${ this.getMinutesOnly(obj) }`;
         }
 
-        getNextDay() {
+        getNextDay = () => {
             const tomorrow = this.getCurrentDate();
             return new Date(tomorrow.setDate(tomorrow.getDate() + 1));
         }
 
-        getNextWeek() {
+        getNextWeek = () => {
             const week = this.getCurrentDate();
             return new Date(week.setDate(week.getDate() + 7));
         }
@@ -68,7 +68,7 @@ const withFormattedDateFuncs = (View) => {
             const mounths = ['янв', 'фев', 'мар', 'апр', 
                 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
 
-                return mounths[ obj.getMonth()];
+                return mounths[ obj.getMonth() ];
         }
     
         getDayAndShortMonth(obj) {
@@ -96,12 +96,6 @@ const withFormattedDateFuncs = (View) => {
             return `${ date } ${ this.getFullMonthName(mounth) } ${ year }, 
                 ${ this.getTwoIntegerNumber(hours) }:${ this.getTwoIntegerNumber(minutes) }`;
         }
-    
-        getHours(date) {
-            const timeArr = date.split('T').slice(-1);
-            const timeArrWithoutSec = [...timeArr.join('').split(':').slice(0, 2)];
-            return timeArrWithoutSec.join(':');
-        }
 
         componentDidMount() {
             this.setState({
@@ -112,14 +106,12 @@ const withFormattedDateFuncs = (View) => {
         }
 
         funcs = {
-            getHours: this.getHours,
+            setDate: this.setDate,
+            getCurrentDate: this.getCurrentDate,  
             getNextDay: this.getNextDay,
             getNextWeek: this.getNextWeek,
             getFormattedDateFullMonth: this.getFormattedDateFullMonth,
-            getFormattedDateFullMonthAndTime: this.getFormattedDateFullMonthAndTime,
-            getCurrentDate: this.getCurrentDate,                   
-            setDate: this.setDate,
-            getHoursAndMinutesTextOnly: this.getHoursAndMinutesTextOnly,
+            getFormattedDateFullMonthAndTime: this.getFormattedDateFullMonthAndTime,                                    
             checkDateOnToday: this.checkDateOnToday,
             getHoursAndMinutesOnly: this.getHoursAndMinutesOnly
         } 

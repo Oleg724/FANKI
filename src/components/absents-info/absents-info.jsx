@@ -126,7 +126,7 @@ class AbsentsInfo extends Component {
     }
 
     getFormattedText = (text, num) => {
-        if (num === 0) {
+        if (!num) {
             return 'Нет';
         } else if (num === 1) {
             return text;
@@ -189,6 +189,8 @@ class AbsentsInfo extends Component {
         
         const filteredList = this.getFilteredList(absentList, absentFilter)
 
+        console.log(this.getFormattedNumber(sickLeaveNumber))
+
         return (
             <div className="absents-info">
                 <div className="absents-info__inner">
@@ -206,25 +208,29 @@ class AbsentsInfo extends Component {
                     <div className="info-plate-wrapper">
                         <InfoPlate 
                             actionHandler={ this.setAbsentFilter } id="all"
-                            title="Все" count={ allNumber } 
+                            title="Все" 
+                            count={ this.getFormattedNumber(allNumber) } 
                             text={ this.getFormattedText(this._employeeTitle, this.getFormattedNumber(allNumber)) } 
                             clazz="green"
                             active={ this.state.all } />
                         <InfoPlate 
                             actionHandler={ this.setAbsentFilter } id="vacation"
-                            title="В отпуске" count={ vacationNumber } 
+                            title="В отпуске" 
+                            count={ this.getFormattedNumber(vacationNumber) } 
                             text={ this.getFormattedText(this._employeeTitle, this.getFormattedNumber(vacationNumber)) } 
                             clazz="blue"
                             active={ this.state.vacation } />
                         <InfoPlate 
                             actionHandler={ this.setAbsentFilter } id="dayOff" 
-                            title="Отгул" count={ dayOffNumber } 
+                            title="Отгул" 
+                            count={ this.getFormattedNumber(dayOffNumber) } 
                             text={ this.getFormattedText(this._employeeTitle, this.getFormattedNumber(dayOffNumber)) } 
                             clazz="orange"
                             active={ this.state.dayOff } />
                         <InfoPlate 
                             actionHandler={ this.setAbsentFilter } id="sickLeave" 
-                            title="Больничный" count={ sickLeaveNumber } 
+                            title="Больничный" 
+                            count={ this.getFormattedNumber(sickLeaveNumber) } 
                             text={ this.getFormattedText(this._employeeTitle, this.getFormattedNumber(sickLeaveNumber)) } 
                             clazz="red"
                             active={ this.state.sickLeave } />
@@ -242,4 +248,6 @@ const mapMethodsToProps = (dataService) => {
     }
 };
 
-export default withDataService(mapMethodsToProps)( withData( withFormattedDateFuncs(AbsentsInfo)));
+export default withDataService(mapMethodsToProps)( 
+    withData( 
+        withFormattedDateFuncs(AbsentsInfo)));
