@@ -9,7 +9,7 @@ const MessageBoard = ({
     onNextPage, 
     onPrevPage, 
     title,
-    withoutLink = false, 
+    withoutLink = true, 
     children, 
     currentPage = 0,
     numberOfItems,
