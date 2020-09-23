@@ -3,6 +3,10 @@
     transition: all .4s ease;
 }
 
-.arrow.rotate {
+.arrow {
     transform: rotateX(180deg);
+}
+
+.arrow.rotate {
+    transform: rotateX(0);
 }
