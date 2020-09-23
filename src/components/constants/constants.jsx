@@ -16,28 +16,154 @@ export default class Constants {
     
     _main = {
         label: 'Компания',
-        list: {
-            'Главная': <Fanki/>,
-            'Запросы': <Flesh/>,
-            'Календарь': <Calendar/>,
-            'База знаний': <Book/>,
-            'Новости': <BookOpen/>,
-            'Задачи': <CheckmarkCircle/>,
-            'Чаты': <MessageCircle/>,
-        }
+        list: [
+            {
+                id: 1,
+                title: 'Главная',
+                icon: <Fanki/>,
+                path: '/',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 2,
+                title: 'Запросы',
+                icon: <Flesh/>,
+                path: '/queries',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 3,
+                title: 'Календарь',
+                icon: <Calendar/>,
+                path: '/calendar',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 4,
+                title: 'База знаний',
+                icon: <Book/>,
+                path: '/knowledge-base',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 5,
+                title: 'Новости',
+                icon: <BookOpen/>,
+                path: '/news',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 6,
+                title: 'Задачи',
+                icon: <CheckmarkCircle/>,
+                path: '/tasks',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 7,
+                title: 'Чаты',
+                icon: <MessageCircle/>,
+                path: '/chats',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            }      
+        ]
     };
 
     _administrator = {
         label: 'Администратор',
-        list: {
-            'Статистика компании': <TrendingUp/>,
-            'Структура компании': <Copy/>,
-            'Сотрудники': <People/>,
-            'База знаний': <Book/>,
-            'Новости': <BookOpen/>,
-            'Настройки': <Settings/>,
-            'Служба поддержки': <Layers/>,
-        }
+        list: [
+            {
+                id: 1,
+                title: 'Статистика компании',
+                icon: <TrendingUp/>,
+                path: '/stats',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 2,
+                title: 'Структура компании',
+                icon: <Copy/>,
+                path: '/structure',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 3,
+                title: 'Сотрудники',
+                icon: <People/>,
+                path: '/staff',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 4,
+                title: 'База знаний',
+                icon: <Book/>,
+                path: '/knowledge-base',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 5,
+                title: 'Новости',
+                icon: <BookOpen/>,
+                path: '/news',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 6,
+                title: 'Настройки',
+                icon: <Settings/>,
+                path: '/settings',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            },
+            {
+                id: 7,
+                title: 'Служба поддержки',
+                icon: <Layers/>,
+                path: '/support',
+                description: {
+                    title: 'Название блока',
+                    text: 'Текст описания блока',
+                }
+            }   
+        ]
     };
 
     getMainList = () => {

@@ -19,36 +19,6 @@
     list-style: none;
 }
 
-.link__item {
-    width: 190px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    transition: all .3s linear;
-    text-decoration: none;
-    color: #000000;
-}
-
-.link__item:hover {
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #ff4c00;
-    color: #ffffff;
-}
-
-.link__item:hover .link__icon > svg:not(.white) path {
-    fill: #ffffff;
-}
-
-.link__item:hover .link__icon > .white path {
-    stroke: #ffffff;
-}
-
-.link__icon {
-    padding: 0 15px 0 5px;
-}
-
-.label,
-.link__item {
+.label {
     -webkit-user-select: none;
 }
