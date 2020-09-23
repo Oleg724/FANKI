@@ -1,0 +1,26 @@
+.switcher {
+    width: 35px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ff4c00;
+    position: relative; 
+}
+
+.switcher:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: all .3s ease-out;
+}
+
+.active.switcher:before {
+    right: 17px;
+    background-color: #fff;
+}

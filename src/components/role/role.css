@@ -3,6 +3,7 @@
     border: none;
     outline: none;
     list-style: none;
+    position: relative;
 }
 
 .role__item {
@@ -12,4 +13,22 @@
 
 .role__item:hover {
     background-color: #f5f5f5;
+}
+
+.role__inner {
+    position: absolute;
+    top: 100%;
+    right: -23px;
+    animation: appearence .8s ease-in;
+    z-index: 4;
+}
+
+@keyframes appearence {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

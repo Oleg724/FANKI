@@ -19,7 +19,7 @@
     margin-right: auto;
 }
 
-.header__item:nth-child(2) {
+.header__item:nth-child(3) {
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     padding: 0 20px;

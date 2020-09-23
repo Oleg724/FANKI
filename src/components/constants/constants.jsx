@@ -11,6 +11,10 @@ import Copy from './copy-icon';
 import People from './people-icon';
 import Settings from './settings-icon';
 import Layers from './layers-icon';
+import SettingsIcon from '../../assets/role/settings.svg';
+import PersonIcon from '../../assets/role/person.svg';
+import TimerIcon from '../../assets/role/timer.svg';
+import LogOutIcon from '../../assets/role/log-out.svg';
 
 export default class Constants {
     
@@ -166,6 +170,41 @@ export default class Constants {
         ]
     };
 
+    _roleMenu = [
+        {   
+            id: 1,
+            title: 'Личный профиль',
+            icon: PersonIcon,
+            isLink: true,
+            path: '/profile',
+            alt: 'human'
+        },
+        {
+            id: 2,
+            title: 'Настройки',
+            icon: SettingsIcon,
+            isLink: true,
+            path: '',
+            alt: 'settings'
+        },
+        {
+            id: 3,
+            title: 'Отображение времени рабочей среды',
+            icon: TimerIcon,
+            isLink: false,
+            path: '/time-settings',
+            alt: 'watch'
+        },
+        {
+            id: 4,
+            title: 'Выйти из аккаунта',
+            icon: LogOutIcon,
+            isLink: true,
+            path: '/',
+            alt: 'exit'
+        }
+    ]
+
     getMainList = () => {
         return this._main.list;
     };
@@ -180,5 +219,9 @@ export default class Constants {
 
     getAdministratorLabel = () => {
         return this._administrator.label;
-    }
+    };
+
+    getRoleList = () => {
+        return this._roleMenu;
+    };
 }
