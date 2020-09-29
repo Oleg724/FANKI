@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/FANKI-at-the-development-stage-/static/css/main.a6743c57.chunk.css",
+    "main.js": "/FANKI-at-the-development-stage-/static/js/main.0bd461b6.chunk.js",
+    "main.js.map": "/FANKI-at-the-development-stage-/static/js/main.0bd461b6.chunk.js.map",
+    "runtime-main.js": "/FANKI-at-the-development-stage-/static/js/runtime-main.b8e2d708.js",
+    "runtime-main.js.map": "/FANKI-at-the-development-stage-/static/js/runtime-main.b8e2d708.js.map",
+    "static/js/2.e9487cf3.chunk.js": "/FANKI-at-the-development-stage-/static/js/2.e9487cf3.chunk.js",
+    "static/js/2.e9487cf3.chunk.js.map": "/FANKI-at-the-development-stage-/static/js/2.e9487cf3.chunk.js.map",
+    "index.html": "/FANKI-at-the-development-stage-/index.html",
+    "precache-manifest.ede59fdf86657169b22c3295ed20cb3a.js": "/FANKI-at-the-development-stage-/precache-manifest.ede59fdf86657169b22c3295ed20cb3a.js",
+    "service-worker.js": "/FANKI-at-the-development-stage-/service-worker.js",
+    "static/css/main.a6743c57.chunk.css.map": "/FANKI-at-the-development-stage-/static/css/main.a6743c57.chunk.css.map",
+    "static/js/2.e9487cf3.chunk.js.LICENSE.txt": "/FANKI-at-the-development-stage-/static/js/2.e9487cf3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8e2d708.js",
+    "static/js/2.e9487cf3.chunk.js",
+    "static/css/main.a6743c57.chunk.css",
+    "static/js/main.0bd461b6.chunk.js"
+  ]
+}
