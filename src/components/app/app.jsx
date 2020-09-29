@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { ServiceProvider } from '../service-context';
 import { ConstantsProvider } from '../constants-context';
 import Header from '../header';
@@ -12,7 +13,6 @@ import KnowledgeBaseBoard from '../knowledge-base-board';
 import NotificationsBoard from '../notifications-board';
 import EventsBoard from '../events-board';
 import ErrorBoundry from '../error-boundry';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './app.css';
 
 export default class App extends Component {
