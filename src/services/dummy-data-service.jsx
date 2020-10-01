@@ -933,8 +933,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-10',
                     end: {
-                        after: '2020-09-29T10:00:00',
-                        before: '2020-09-29T12:00:00'
+                        after: '2020-10-08T10:00:00',
+                        before: '2020-10-08T12:00:00'
                     }
                 }
             },
@@ -951,8 +951,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-31T10:00:00',
-                        before: '2020-09-31T12:00:00'
+                        after: '2020-10-10T10:00:00',
+                        before: '2020-10-10T12:00:00'
                     }
                 }
             },
@@ -987,8 +987,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-29T10:00:00',
-                        before: '2020-09-29T12:00:00'
+                        after: '2020-10-12T10:00:00',
+                        before: '2020-10-12T12:00:00'
                     }
                 }
             },
@@ -1005,8 +1005,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-09-15',
                     end: {
-                        after: '2020-10-01T10:00:00',
-                        before: '2020-10-01T12:00:00'
+                        after: '2020-10-13T10:00:00',
+                        before: '2020-10-13T12:00:00'
                     }
                 }
             },
@@ -1023,8 +1023,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-10',
                     end: {
-                        after: '2020-09-28T10:00:00',
-                        before: '2020-09-28T12:00:00'
+                        after: '2020-10-14T10:00:00',
+                        before: '2020-10-14T12:00:00'
                     }
                 }
             },
@@ -1041,8 +1041,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-30T10:00:00',
-                        before: '2020-09-30T12:00:00'
+                        after: '2020-10-15T10:00:00',
+                        before: '2020-10-15T12:00:00'
                     }
                 }
             },
@@ -1059,8 +1059,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-10-01T10:00:00',
-                        before: '2020-10-01T12:00:00'
+                        after: '2020-10-16T10:00:00',
+                        before: '2020-10-16T12:00:00'
                     }
                 }
             },
@@ -1077,8 +1077,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-09-18T09:00:00',
-                        before: '2020-09-18T13:00:00'
+                        after: '2020-10-18T09:00:00',
+                        before: '2020-10-18T13:00:00'
                     }
                 }
             },
@@ -1203,8 +1203,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-10-05T10:00:00',
-                        before: '2020-10-05T12:00:00'
+                        after: '2020-10-13T10:00:00',
+                        before: '2020-10-13T12:00:00'
                     }
                 }
             },
@@ -1221,8 +1221,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-10-4T10:00:00',
-                        before: '2020-10-4T12:00:00'
+                        after: '2020-10-14T10:00:00',
+                        before: '2020-10-14T12:00:00'
                     }
                 }
             },
@@ -1239,8 +1239,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-29T10:00:00',
-                        before: '2020-09-29T12:00:00'
+                        after: '2020-10-16T10:00:00',
+                        before: '2020-10-16T12:00:00'
                     }
                 }
             },
@@ -1257,8 +1257,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-09-15',
                     end: {
-                        after: '2020-10-03T10:00:00',
-                        before: '2020-10-03T12:00:00'
+                        after: '2020-10-13T10:00:00',
+                        before: '2020-10-13T12:00:00'
                     }
                 }
             },
@@ -1275,8 +1275,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-10',
                     end: {
-                        after: '2020-09-18T10:00:00',
-                        before: '2020-09-18T12:00:00'
+                        after: '2020-10-18T10:00:00',
+                        before: '2020-10-18T12:00:00'
                     }
                 }
             },
@@ -1293,8 +1293,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-20',
                     end: {
-                        after: '2020-09-30T10:00:00',
-                        before: '2020-09-30T12:00:00'
+                        after: '2020-10-30T10:00:00',
+                        before: '2020-10-30T12:00:00'
                     }
                 }
             },
@@ -1311,8 +1311,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-10-01T10:00:00',
-                        before: '2020-10-01T12:00:00'
+                        after: '2020-10-21T10:00:00',
+                        before: '2020-10-21T12:00:00'
                     }
                 }
             },
@@ -1329,8 +1329,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-09-25T09:00:00',
-                        before: '2020-09-25T13:00:00'
+                        after: '2020-10-25T09:00:00',
+                        before: '2020-10-25T13:00:00'
                     }
                 }
             },
@@ -1383,8 +1383,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-09-16',
                     end: {
-                        after: '2020-09-21T09:00:00',
-                        before: '2020-09-21T13:00:00'
+                        after: '2020-10-21T09:00:00',
+                        before: '2020-10-21T13:00:00'
                     }
                 }
             },
@@ -1400,8 +1400,8 @@ export default class DummyDataService {
                 period: {
                     start: '2020-08-16',
                     end: {
-                        after: '2020-09-24T09:00:00',
-                        before: '2020-09-24T13:00:00'
+                        after: '2020-10-24T09:00:00',
+                        before: '2020-10-24T13:00:00'
                     }
                 }
             },

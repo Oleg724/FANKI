@@ -23,7 +23,6 @@ const withData = (View) => {
                 .then((data) => {
                     this.setState({ data })
                 })
-                .catch();
         }
 
         render() {
